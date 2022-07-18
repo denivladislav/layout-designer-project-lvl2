@@ -9,9 +9,35 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div>
-    Initial commit for index!
-  </div>
+  <header>
+    <div class="logo-wrapper">
+      <img width="24px" height="24px" src="images/logo.svg" alt="header-image">
+      <span class="text-white">Music Box</span>
+    </div>
+    <ul class="nav-bar">
+      <li><a class="active">Главная</a></li>
+      <li><a>Каталог</a></li>
+      <li><a>Исполнители</a></li>
+      <li><a>Контакты</a></li>
+    </ul>
+    <input placeholder="Поиск..." id="search" type="text">
+  </header>
+  <main>
+    <section id="page-description">
+      <div class="container bg-image">
+        <h1>Онлайн-музыка где угодно</h1>
+        <h2>Без ограничений</h2>
+        <p>Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</p>
+        <form>
+          <div>
+            <input class="margin-right-24" placeholder="Имя" id="name" type="text">
+            <input placeholder="Email" id="email" type="text">
+          </div>
+          <button class="btn btn-green margin-top-24" type="submit">Получить доступ</button>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
 

@@ -1,0 +1,285 @@
+@for $i from 1 through 6 {
+  $step: $i * 4;
+
+  .margin-top-#{$step} {
+    margin-top: $step * 1px;
+  }
+
+  .margin-right-#{$step} {
+    margin-right: $step* 1px;
+  }
+
+  .margin-bottom-#{$step} {
+    margin-bottom: $step * 1px;
+  }
+
+  .margin-left-#{$step} {
+    margin-left: $step * 1px;
+  }
+}
+
+@mixin text-color($color-name, $color-value) {
+  .text-#{"" + $color-name} {
+    color: $color-value;
+  }
+}
+
+@each $color-name, $color-value in $colors {
+  @include text-color($color-name, $color-value)
+}
+
+@mixin margin-x($mr: 0, $ml: 0) {
+  margin-right: $mr;
+  margin-left: $ml;
+}
+
+@mixin margin-y($mt: 0, $md: 0) {
+  margin-top: $mt;
+  margin-bottom: $md;
+}
+
+@mixin padding-x($pr: 0, $pl: 0) {
+  padding-right: $pr;
+  padding-left: $pl;
+}
+
+@mixin padding-y($pt: 0, $pb: 0) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: map-get($colors, grey);
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 25px;
+  width: 100%;
+
+  & img {
+    @include margin-x(16px, 119px);
+  }
+
+  & span {
+    text-transform: uppercase;
+  }
+
+  & input {
+    @include margin-x(121px, auto);
+    width: 248px;
+    height: 25px;
+    outline: none;
+    border: none;
+    background-color: #3C3B3D;
+    color: inherit;
+    border-radius: 50px;
+
+    &::placeholder {
+      text-transform: uppercase;
+      padding-left: 10px;
+    }
+  }
+
+  & .logo-wrapper {
+    display: flex;
+  }
+
+  & .nav-bar {
+    @include margin-x(0, 90px);
+
+    li {
+      display: inline;
+
+      & a {
+        @include margin-x(24px, 0);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  & .active {
+    color: map-get($colors, white);
+  }
+}
+
+section {
+  & form {
+    @include margin-y(17px, 1.5rem);
+    max-width: 570px;
+
+    & input {
+      box-sizing: border-box;
+      color: map-get($colors, white);
+
+      min-width: 270px;
+      min-height: 50px;
+
+      outline: none;
+      border: 2px solid map-get($colors, grey);
+      border-radius: 3px;
+      background: none;
+
+      &::placeholder {
+        color: map-get($colors, white);
+        padding-left: 20px;
+      }
+    }
+
+    & button {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+}
+
+#page-description {
+  @include margin-y(200px, 200px);
+  color: map-get($colors, white);
+
+  & p {
+    @include margin-y(30px, 0);
+    font-size: 16px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image {
+  &:before {
+    position: absolute;
+    top: 0;
+
+    z-index: -1;
+  
+    width: 100%;
+    height: 100%;
+  
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-size: cover;
+  
+    content: "";
+  }
+}
+
+.btn {
+  @include padding-x(30px, 30px);
+  @include padding-y(20px, 20px);
+  background: none;
+  border: 1px solid map-get($colors, grey);
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.btn-green {
+  background-color: #34C176;
+  color: map-get($colors, white);
+  border: none;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  body {
+    @include padding-x(20px, 20px);
+  }
+
+  header {
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+
+    & img {
+      @include margin-x(16px, 0);
+    }
+
+    & input {
+      @include margin-x(0, 0);
+      @include margin-y(17px, 0);
+
+      width: 100%;
+    }
+
+    & .nav-bar {
+      @include margin-x(0, 0);
+      @include margin-y(17px, 0);
+
+      li {
+        display: block;
+      }
+    }
+  }
+
+  section {
+    & form {
+      & input {
+        width: 100%;
+      }
+    }
+  }
+
+  #page-description {
+    @include margin-y(75px, 200px);
+
+    & p {
+      @include margin-y(16px, 0);
+    }
+  }
+
+  #email {
+    @include margin-y(24px, 0);
+  }
+}
