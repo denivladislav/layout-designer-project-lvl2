@@ -18,6 +18,10 @@
   }
 }
 
+.margin-top-64 {
+  margin-top: 64px;
+}
+
 @mixin text-color($color-name, $color-value) {
   .text-#{"" + $color-name} {
     color: $color-value;

@@ -94,6 +94,10 @@
   margin-left: 24px;
 }
 
+.margin-top-64 {
+  margin-top: 64px;
+}
+
 .text-white {
   color: #ffffff;
 }
@@ -104,6 +108,10 @@
 
 .text-black {
   color: #08020d;
+}
+
+.text-orange {
+  color: #F89202;
 }
 
 @font-face {
@@ -307,7 +315,6 @@ header .active {
 .pricing-items-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 .pricing-item {
@@ -356,6 +363,50 @@ header .active {
   color: #ffffff;
 }
 
+.news-item {
+  display: flex;
+  width: 100%;
+}
+.news-item .news-wrapper {
+  margin-right: 0;
+  margin-left: 50px;
+}
+.news-item h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-transform: none;
+  text-align: left;
+  color: #ffffff;
+  font-size: 30px;
+}
+.news-item p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.news-item-reversed {
+  flex-direction: row-reverse;
+}
+
+.news-author {
+  margin-top: 0;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.news-footer .btn {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand-name {
+  color: #F89202;
+  text-transform: uppercase;
+}
+
 #page-description {
   margin-top: 200px;
   margin-bottom: 200px;
@@ -391,15 +442,15 @@ header .active {
   font-size: 16px;
 }
 
-#page-pricing .container {
+#page-pricing .container, #page-news .container {
   padding-top: 100px;
   padding-bottom: 0;
 }
-#page-pricing h2 {
+#page-pricing h2, #page-news h2 {
   margin-top: 0;
   margin-bottom: 50px;
 }
-#page-pricing a {
+#page-pricing a, #page-news a {
   margin-top: 40px;
   margin-bottom: 0;
 }
@@ -438,6 +489,19 @@ header .active {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 16px;
+  }
+  .news-item {
+    flex-direction: column;
+    font-size: 16px;
+  }
+  .news-item h3 {
+    margin-top: 50px;
+    margin-bottom: 16px;
+    font-size: inherit;
+  }
+  .news-item .news-wrapper {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 

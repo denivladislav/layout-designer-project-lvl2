@@ -67,7 +67,6 @@
 .pricing-items-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 .pricing-item {
@@ -114,6 +113,50 @@
   color: map-get($colors, white);
 }
 
+.news-item {
+  display: flex;
+  width: 100%;
+
+  & .news-wrapper {
+    @include margin-x(0, 50px);
+  }
+
+  & h3 {
+    @include margin-y(0, 30px);
+    text-transform: none;
+    text-align: left;
+    color: map-get($colors, white);
+    font-size: 30px;
+  }
+
+  & p {
+    @include margin-y(0, 24px);
+    text-align: left;
+  }
+}
+
+.news-item-reversed {
+  flex-direction: row-reverse;
+}
+
+.news-author {
+  @include margin-y(0, 60px);
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.news-footer {
+  & .btn {
+    @include padding-y(16px, 16px);
+  }
+}
+
+.brand-name {
+  color: map-get($colors, orange);
+  text-transform: uppercase;
+}
+
 #page-description {
   @include margin-y(200px, 200px);
   color: map-get($colors, white);
@@ -152,7 +195,7 @@
   }
 }
 
-#page-pricing {
+#page-pricing, #page-news {
   & .container {
     @include padding-y(100px, 0);
   }
@@ -204,5 +247,19 @@
   .page-pricing-info {
     @include margin-y(0, 0);
     font-size: 16px;
+  }
+
+  .news-item {
+    flex-direction: column;
+    font-size: 16px;
+
+    & h3 {
+      @include margin-y(50px, 16px);
+      font-size: inherit;
+    }
+
+    & .news-wrapper {
+      @include margin-x(0, 0);
+    }
   }
 }
