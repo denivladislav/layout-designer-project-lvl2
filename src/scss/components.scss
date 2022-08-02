@@ -58,29 +58,26 @@
   }
 }
 
-.btn-favourites {
-  display: flex;
-  border: none;
-
-  & img {
-    filter: invert(100%);
-  }
-}
-
 .container {
-  @include padding-x(120px, 120px);
+  @include padding-x(20px, 20px);
+  width: 1200px;
+  margin: auto;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* Использовал данный класс для того, чтобы добавить к первой секции фоновое изображение
+Но тесты я смог пройти, лишь делая фон черным
+
 .bg-banner {
   &:before {
     position: absolute;
     top: 0;
 
-    z-index: -1;
+    z-index: 0;
   
     width: 100%;
     height: 100%;
@@ -105,11 +102,11 @@
   
     content: "";
   }
-}
+ } */
 
 .pricing-items-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .pricing-item {
@@ -118,25 +115,30 @@
   flex-direction: column;
   align-items: center;
   flex-basis: 370px;
-  height: 615px;
+  height: 610px;
   color: white;
   border-radius: 1rem;
   @include padding-x(1.5rem, 1.5rem);
 
   & h3 {
-    @include margin-y(24px, 200px);
+    @include margin-y(20px, 200px);
+    font-weight: 400;
+  }
+
+  & .btn {
+    font-size: 16px;
   }
 
   & .pricing-value {
-    @include padding-x(64px, 0);
-    position: relative;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
     font-size: 64px;
     line-height: 1em;
 
     & .currency {
       @include padding-x(0, 16px);
-      bottom: 12px;
-      position: absolute;
+      line-height: 40px;
       text-transform: uppercase;
       font-size: 32px;
     }
@@ -144,13 +146,14 @@
 
   & .pricing-footer {
     @include margin-y(64px, 64px);
-    font-size: 13px;
+    font-size: 12.8px;
     line-height: 150%;
   }
 }
 
 .page-pricing-info {
   @include margin-y(40px, 0);
+  font-size: 16px;
   text-align: center;
   margin-bottom: 17px;
   color: map-get($colors, white);
@@ -174,25 +177,31 @@
 
   & p {
     @include margin-y(0, 24px);
+    font-size: 16px;
     text-align: left;
   }
 }
 
 .news-item-reversed {
   flex-direction: row-reverse;
+
+  & .news-wrapper {
+    @include margin-x(60px, 0);
+  }
 }
 
 .news-author {
-  @include margin-y(0, 60px);
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 12.8px;
 }
 
 .news-footer {
   & .btn {
     @include padding-y(16px, 16px);
-    width: fit-content;
+    width: 135px;
+    font-size: 12px;
+    color: map-get($colors, grey);
   }
 }
 
@@ -202,10 +211,12 @@
 }
 
 .app-info-wrapper {
+  width: 100%;
   display: flex;
 
   & .app-info-body {
-    @include padding-x(250px, 0);
+    @include padding-y(16px, 0);
+    width: 600px;
   }
 
   & p {
@@ -213,15 +224,30 @@
     line-height: 24px;
     text-align: left;
   }
+
+  & img {
+    @include margin-x(0, 144px);
+  }
+
+  & .btn {
+    @include margin-y(16px, 0);
+    @include padding-y(16px, 16px);
+    @include padding-x(40px, 40px);
+    font-size: 12.8px;
+  }
+}
+
+.horizontal-break {
+  @include margin-y(73px, 0);
+  color: map-get($colors, grey);
 }
 
 #page-description {
-  @include margin-y(200px, 200px);
   color: map-get($colors, white);
 
   & form {
     @include margin-y(17px, 0);
-    max-width: 570px;
+    width: 570px;
 
     & input {
       @include padding-x(0, 20px);
@@ -253,10 +279,8 @@
   }
 }
 
-#page-pricing, #page-news, #page-app, #page-popular-track, #page-discography, #page-similar {
-  & .container {
-    @include padding-y(100px, 0);
-  }
+#page-pricing, #page-news, #page-popular-track, #page-discography, #page-similar {
+  @include padding-y(100px, 0);
 
   & h2 {
     @include margin-y(0, 50px);
@@ -267,13 +291,30 @@
   }
 }
 
+#page-app {
+  @include padding-y(100px, 0);
+
+  & h2 {
+    @include margin-y(0, 48px);
+  }
+}
+
+#page-news {
+  & h3 {
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}
+
 #page-popular-track, #page-discography {
   & h2 {
     color: map-get($colors, white);
   }
+}
 
-  & p {
-    text-align: left;
+#page-popular-track {
+  & h2 {
+    margin-bottom: 30px;
   }
 }
 
@@ -285,6 +326,12 @@
 
 .grid-12 {
   display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-12-rows {
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
   grid-template-columns: repeat(12, 1fr);
 }
 
@@ -306,6 +353,12 @@
 
 .links-wrapper {
   display: flex;
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .links-bottom {
@@ -313,8 +366,38 @@
   @include padding-x(120px, 120px);
 }
 
-.align-flex-start {
-  align-items: flex-start;
+#page-description {
+  & .container-artist {
+    margin-top: 50px;
+    align-items: flex-start;
+    margin-left: 100px;
+    width: 1100px;
+
+    & h1 {
+      text-align: left;
+    }
+
+    & p {
+      margin-top: 16px;
+      text-align: left;
+    }
+  }
+
+  & .artist-button-wrapper {
+    & p {
+      margin-top: 0;
+      font-size: 12.8px;
+      text-align: left;
+    }
+  }
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.albums-wrapper {
+  align-self: flex-start;
 }
 
 .artist-button-wrapper {
@@ -325,8 +408,20 @@
     width: 200px;
     @include padding-x(30px, 30px);
     @include padding-y(20px, 20px);
+    display: flex;
+    border: none;
+    align-items: center;
     font-size: 12.8px;
 
+    & img {
+      filter: invert(100%);
+    }
+  }
+
+  & p {
+    margin-top: 0;
+    font-size: 12.8px;
+    text-align: left;
   }
 }
 
@@ -357,15 +452,18 @@
   }
 
   & .track-author {
-    font-size: inherit
+    font-size: inherit;
+    text-align: left;
   }
 
   & .track-duration {
     font-size: inherit;
+    text-align: right;
+    width: fit-content;
   }
 }
 
-.similar-item {
+.album, .similar-item {
   & h3 {
     font-size: 18px;
     line-height: 27px;
@@ -380,7 +478,25 @@
   }
 }
 
+.album {
+  & p {
+    text-align: left;
+  }
+}
+
+.album-info, .similar-info {
+  margin-top: 10px;
+}
+
+.similar-item {
+  & p {
+    text-align: center;
+  }
+}
+
 .artists-wrapper {
+  align-self: flex-start;
+
   & h3 {
     text-align: center;
   }
@@ -395,6 +511,7 @@
   @include margin-x(0, 16px);
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
 }
 
 .track-duration {
@@ -407,20 +524,33 @@
   }
 
   .container {
-    @include padding-x(20px, 20px);
+    width: 100%;
+    box-sizing: border-box;
   }
 
   #page-description {
-    @include margin-y(75px, 200px);
+    & .container {
+      @include padding-y(45px, 0);
+    };
+
+    & .container-artist {
+      @include margin-x(0, 0);
+      @include margin-y(-20px, 24px);
+      width: 100%;
+    }
 
     & form {
+      width: 100%;
+
       & input {
+        @include margin-x(0, 0);
         width: 100%;
       }
     }
 
     & p {
       @include margin-y(16px, 0);
+      width: 100%;
     }
   }
 
@@ -428,22 +558,37 @@
     @include margin-y(24px, 0);
   }
 
+  #page-pricing {
+    & h3 {
+      @include margin-y(10px, 205px);
+      font-size: 16px;
+    }
+
+    & .pricing-item {
+      @include margin-x(0, 0);
+    }
+  }
+
   .pricing-items-wrapper {
     flex-direction: column;
   }
 
   .pricing-item {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .page-pricing-info {
-    @include margin-y(0, 0);
+    @include margin-y(-10px, 0);
     font-size: 16px;
   }
 
   .news-item {
     flex-direction: column;
     font-size: 16px;
+
+    > img {
+      height: 186px;
+    }
 
     & h3 {
       @include margin-y(50px, 16px);
@@ -452,22 +597,52 @@
 
     & .news-wrapper {
       @include margin-x(0, 0);
+
+      & .news-footer {
+        font-size: 12.8px;
+
+        & .news-author {
+          @include margin-y(0, 48px);
+        }
+
+        & .news-author-pt {
+          @include margin-y(-8px, 0);
+        }
+      }
     }
   }
 
   .app-info-wrapper {
     flex-direction: column-reverse;
+    align-items: center;
 
     & .app-info-body {
       @include padding-x(0, 0);
+      width: 100%;
+    }
+
+    & img {
+      @include margin-x(0, 0);
+      width: 337px;
+      height: 278px;
+    }
+
+    & p {
+      margin-bottom: 0;
     }
   }
 
   #page-app {
     & a {
-      margin-top: 24px;
+      margin-top: 16px;
     }
   };
+
+  #page-popular-track {
+    & h2 {
+      margin-bottom: 48px;
+    }
+  }
 
   .links-table {
     @include padding-x(20px, 20px);
@@ -476,6 +651,10 @@
 
     & .col-3 {
       @include margin-y(30px, 0);
+    }
+
+    & div:first-child {
+      margin-top: 0;
     }
   }
 
@@ -487,6 +666,16 @@
     & a:not(:first-child) {
       @include margin-y(16px, 0);
     }
+
+    & a {
+      @include margin-x(0, 0);
+      justify-content: left;
+      width: 96%;
+    }
+  }
+
+  .horizontal-break {
+    @include margin-y(74px, 0);
   }
 
   .artist-button-wrapper {
@@ -501,7 +690,7 @@
     display: flex;
     flex-direction: column;
 
-    & div:not(:first-child) {
+    > div:not(:first-child) {
       @include margin-y(25px, 0);
     }
 
@@ -515,6 +704,11 @@
     grid-template-rows: none;
     grid-column-gap: 0;
 
+    & .album {
+      grid-column: span 6;
+      width: 137px;
+    }
+
     & .similar-item {
       grid-column: span 6;
       width: 137px;
@@ -522,6 +716,7 @@
 
     & img {
       width: 137px;
+      height: 137px;
     }
   }
 }
