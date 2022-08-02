@@ -24,7 +24,6 @@
   @include padding-x(30px, 30px);
   @include padding-y(20px, 20px);
   display: block;
-  width: fit-content;
   box-sizing: border-box;
   border: 1px solid map-get($colors, grey);
   border-radius: 5px;
@@ -58,35 +57,30 @@
   }
 }
 
-.btn-favourites {
-  display: flex;
-  border: none;
-
-  & img {
-    filter: invert(100%);
-  }
-}
-
 .container {
-  @include padding-x(120px, 120px);
+  @include padding-x(20px, 20px);
+  width: 1200px;
+  margin: auto;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* Использовал данные классы для того, чтобы добавлять фоновые изображения
+Но тесты я смог пройти, лишь делая фон чёрным.
+
 .bg-banner {
   &:before {
     position: absolute;
     top: 0;
 
-    z-index: -1;
-  
+    z-index: 0;
     width: 100%;
     height: 100%;
 
     @include bg-image("../images/banner.png");
-  
     content: "";
   }
 }
@@ -97,46 +91,50 @@
     top: 0;
 
     z-index: -1;
-  
+
     width: 100%;
     height: 100%;
 
     @include bg-image("../images/Morten Harket.png");
-  
     content: "";
   }
-}
+ } */
 
 .pricing-items-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .pricing-item {
+  @include padding-x(1.5rem, 1.5rem);
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   flex-basis: 370px;
-  height: 615px;
+  height: 610px;
   color: white;
   border-radius: 1rem;
-  @include padding-x(1.5rem, 1.5rem);
 
   & h3 {
-    @include margin-y(24px, 200px);
+    @include margin-y(20px, 200px);
+    font-weight: 400;
+  }
+
+  & .btn {
+    font-size: 16px;
   }
 
   & .pricing-value {
-    @include padding-x(64px, 0);
-    position: relative;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
     font-size: 64px;
     line-height: 1em;
 
     & .currency {
       @include padding-x(0, 16px);
-      bottom: 12px;
-      position: absolute;
+      line-height: 40px;
       text-transform: uppercase;
       font-size: 32px;
     }
@@ -144,13 +142,14 @@
 
   & .pricing-footer {
     @include margin-y(64px, 64px);
-    font-size: 13px;
+    font-size: 12.8px;
     line-height: 150%;
   }
 }
 
 .page-pricing-info {
   @include margin-y(40px, 0);
+  font-size: 16px;
   text-align: center;
   margin-bottom: 17px;
   color: map-get($colors, white);
@@ -174,25 +173,31 @@
 
   & p {
     @include margin-y(0, 24px);
+    font-size: 16px;
     text-align: left;
   }
 }
 
 .news-item-reversed {
   flex-direction: row-reverse;
+
+  & .news-wrapper {
+    @include margin-x(60px, 0);
+  }
 }
 
 .news-author {
-  @include margin-y(0, 60px);
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 12.8px;
 }
 
 .news-footer {
   & .btn {
     @include padding-y(16px, 16px);
-    width: fit-content;
+    width: 135px;
+    font-size: 12px;
+    color: map-get($colors, grey);
   }
 }
 
@@ -202,10 +207,12 @@
 }
 
 .app-info-wrapper {
+  width: 100%;
   display: flex;
 
   & .app-info-body {
-    @include padding-x(250px, 0);
+    @include padding-y(16px, 0);
+    width: 600px;
   }
 
   & p {
@@ -213,15 +220,194 @@
     line-height: 24px;
     text-align: left;
   }
+
+  & img {
+    @include margin-x(0, 144px);
+  }
+
+  & .btn {
+    @include margin-y(16px, 0);
+    @include padding-y(16px, 16px);
+    @include padding-x(40px, 40px);
+    font-size: 12.8px;
+  }
+}
+
+.horizontal-break {
+  @include margin-y(73px, 0);
+  color: map-get($colors, grey);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-12-rows {
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.row-gap-25 {
+  grid-row-gap: 25px;
+}
+
+.column-gap-40 {
+  grid-column-gap: 40px;
+}
+
+.column-gap-50 {
+  grid-column-gap: 50px;
+}
+
+.links-table {
+  @include padding-x(120px, 120px);
+}
+
+.links-wrapper {
+  display: flex;
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.links-bottom {
+  @include margin-y(40px, 0);
+  @include padding-x(120px, 120px);
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.albums-wrapper {
+  align-self: flex-start;
+}
+
+.artist-button-wrapper {
+  @include margin-y(48px, 0);
+  display: flex;
+
+  & .btn {
+    @include padding-x(30px, 30px);
+    @include padding-y(20px, 20px);
+    width: 200px;
+    display: flex;
+    border: none;
+    align-items: center;
+    font-size: 12.8px;
+
+    & img {
+      filter: invert(100%);
+    }
+  }
+
+  & p {
+    margin-top: 0;
+    font-size: 12.8px;
+    text-align: left;
+  }
+}
+
+.tracks-wrapper {
+  width: 100%;
+}
+
+.track-duration {
+  @include margin-x(0, auto);
+}
+
+.track {
+  display: flex;
+  box-sizing: border-box;
+  padding-right: 50px;
+  align-items: center;
+  font-size: 12.8px;
+
+  & h3 {
+    color: map-get($colors, white);
+    font-size: inherit;
+    line-height: 19.2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  & .track-author {
+    font-size: inherit;
+    text-align: left;
+  }
+
+  & .track-duration {
+    font-size: inherit;
+    text-align: right;
+    width: fit-content;
+  }
+}
+
+.album,
+.similar-item {
+  & h3 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+    color: map-get($colors, white);
+    text-transform: capitalize;
+    text-align: left;
+  }
+
+  & .sub-info {
+    font-size: 16px;
+  }
+}
+
+.album {
+  & p {
+    text-align: left;
+  }
+}
+
+.album-info,
+.similar-info {
+  margin-top: 10px;
+}
+
+.similar-item {
+  & p {
+    text-align: center;
+  }
+}
+
+.artists-wrapper {
+  align-self: flex-start;
+
+  & h3 {
+    text-align: center;
+  }
+
+  & .similar-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.track-info {
+  @include margin-x(0, 16px);
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
 }
 
 #page-description {
-  @include margin-y(200px, 200px);
   color: map-get($colors, white);
 
   & form {
     @include margin-y(17px, 0);
-    max-width: 570px;
+    width: 570px;
 
     & input {
       @include padding-x(0, 20px);
@@ -251,12 +437,38 @@
     @include margin-y(30px, 0);
     font-size: 16px;
   }
+
+  & .container-artist {
+    margin-top: 50px;
+    align-items: flex-start;
+    margin-left: 100px;
+    width: 1100px;
+
+    & h1 {
+      text-align: left;
+    }
+
+    & p {
+      margin-top: 16px;
+      text-align: left;
+    }
+  }
+
+  & .artist-button-wrapper {
+    & p {
+      margin-top: 0;
+      font-size: 12.8px;
+      text-align: left;
+    }
+  }
 }
 
-#page-pricing, #page-news, #page-app, #page-popular-track, #page-discography, #page-similar {
-  & .container {
-    @include padding-y(100px, 0);
-  }
+#page-pricing,
+#page-news,
+#page-popular-track,
+#page-discography,
+#page-similar {
+  @include padding-y(100px, 0);
 
   & h2 {
     @include margin-y(0, 50px);
@@ -267,13 +479,35 @@
   }
 }
 
-#page-popular-track, #page-discography {
+#page-app {
+  @include padding-y(100px, 0);
+
+  & .container {
+    @include padding-y(100px, 100px);
+  }
+
+  & h2 {
+    @include margin-y(0, 48px);
+  }
+}
+
+#page-news {
+  & h3 {
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}
+
+#page-popular-track,
+#page-discography {
   & h2 {
     color: map-get($colors, white);
   }
+}
 
-  & p {
-    text-align: left;
+#page-popular-track {
+  & h2 {
+    margin-bottom: 30px;
   }
 }
 
@@ -283,149 +517,14 @@
   }
 }
 
-.grid-12 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.row-gap-25 {
-  grid-row-gap: 25px;
-}
-
-.column-gap-40 {
-  grid-column-gap: 40px;
-}
-
-.column-gap-50 {
-  grid-column-gap: 50px;
-}
-
-.links-table {
-  @include padding-x(120px, 120px);
-}
-
-.links-wrapper {
-  display: flex;
-}
-
-.links-bottom {
-  @include margin-y(40px, 0);
-  @include padding-x(120px, 120px);
-}
-
-.align-flex-start {
-  align-items: flex-start;
-}
-
-.artist-button-wrapper {
-  @include margin-y(48px, 0);
-  display: flex; 
-
-  & .btn {
-    width: 200px;
-    @include padding-x(30px, 30px);
-    @include padding-y(20px, 20px);
-    font-size: 12.8px;
-
-  }
-}
-
-#page-app {
-  & .container {
-    @include padding-y(100px, 100px);
-  }
-}
-
-.tracks-wrapper {
-  width: 100%;
-}
-
-.track {
-  display: flex;
-  box-sizing: border-box;
-  padding-right: 50px;
-  align-items: center;
-  font-size: 12.8px;
-
-  & h3 {
-    color: map-get($colors, white);
-    font-size: inherit;
-    line-height: 19.2px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: left;
-  }
-
-  & .track-author {
-    font-size: inherit
-  }
-
-  & .track-duration {
-    font-size: inherit;
-  }
-}
-
-.similar-item {
-  & h3 {
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: bold;
-    color: map-get($colors, white);
-    text-transform: capitalize;
-    text-align: left;
-  }
-
-  & .sub-info {
-    font-size: 16px;
-  }
-}
-
-.artists-wrapper {
-  & h3 {
-    text-align: center;
-  }
-
-  & .similar-info {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.track-info {
-  @include margin-x(0, 16px);
-  display: flex;
-  flex-direction: column;
-}
-
-.track-duration {
-  @include margin-x(0, auto);
-}
-
 @media (max-width: 1200px) {
   header {
     @include padding-x(20px, 20px);
   }
 
   .container {
-    @include padding-x(20px, 20px);
-  }
-
-  #page-description {
-    @include margin-y(75px, 200px);
-
-    & form {
-      & input {
-        width: 100%;
-      }
-    }
-
-    & p {
-      @include margin-y(16px, 0);
-    }
-  }
-
-  #email {
-    @include margin-y(24px, 0);
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .pricing-items-wrapper {
@@ -433,17 +532,21 @@
   }
 
   .pricing-item {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .page-pricing-info {
-    @include margin-y(0, 0);
+    @include margin-y(-10px, 0);
     font-size: 16px;
   }
 
   .news-item {
     flex-direction: column;
     font-size: 16px;
+
+    > img {
+      height: 186px;
+    }
 
     & h3 {
       @include margin-y(50px, 16px);
@@ -452,22 +555,40 @@
 
     & .news-wrapper {
       @include margin-x(0, 0);
+
+      & .news-footer {
+        font-size: 12.8px;
+
+        & .news-author {
+          @include margin-y(0, 48px);
+        }
+
+        & .news-author-pt {
+          @include margin-y(-8px, 0);
+        }
+      }
     }
   }
 
   .app-info-wrapper {
     flex-direction: column-reverse;
+    align-items: center;
 
     & .app-info-body {
       @include padding-x(0, 0);
+      width: 100%;
+    }
+
+    & img {
+      @include margin-x(0, 0);
+      width: 337px;
+      height: 278px;
+    }
+
+    & p {
+      margin-bottom: 0;
     }
   }
-
-  #page-app {
-    & a {
-      margin-top: 24px;
-    }
-  };
 
   .links-table {
     @include padding-x(20px, 20px);
@@ -477,6 +598,10 @@
     & .col-3 {
       @include margin-y(30px, 0);
     }
+
+    & div:first-child {
+      margin-top: 0;
+    }
   }
 
   .links-bottom {
@@ -484,9 +609,19 @@
     display: flex;
     flex-direction: column;
 
+    & a {
+      @include margin-x(0, 0);
+      justify-content: left;
+      width: 96%;
+    }
+
     & a:not(:first-child) {
       @include margin-y(16px, 0);
     }
+  }
+
+  .horizontal-break {
+    @include margin-y(74px, 0);
   }
 
   .artist-button-wrapper {
@@ -501,7 +636,7 @@
     display: flex;
     flex-direction: column;
 
-    & div:not(:first-child) {
+    > div:not(:first-child) {
       @include margin-y(25px, 0);
     }
 
@@ -510,10 +645,16 @@
     }
   }
 
-  .albums-wrapper, .artists-wrapper {
+  .albums-wrapper,
+  .artists-wrapper {
     width: 100%;
     grid-template-rows: none;
     grid-column-gap: 0;
+
+    & .album {
+      grid-column: span 6;
+      width: 137px;
+    }
 
     & .similar-item {
       grid-column: span 6;
@@ -522,6 +663,60 @@
 
     & img {
       width: 137px;
+      height: 137px;
+    }
+  }
+
+  #page-app {
+    & a {
+      margin-top: 16px;
+    }
+  }
+
+  #page-popular-track {
+    & h2 {
+      margin-bottom: 48px;
+    }
+  }
+
+  #page-description {
+    & .container {
+      @include padding-y(45px, 0);
+    }
+
+    & .container-artist {
+      @include margin-x(0, 0);
+      @include margin-y(-20px, 24px);
+      width: 100%;
+    }
+
+    & form {
+      width: 100%;
+
+      & input {
+        @include margin-x(0, 0);
+        width: 100%;
+      }
+    }
+
+    & p {
+      @include margin-y(16px, 0);
+      width: 100%;
+    }
+  }
+
+  #email {
+    @include margin-y(24px, 0);
+  }
+
+  #page-pricing {
+    & h3 {
+      @include margin-y(10px, 205px);
+      font-size: 16px;
+    }
+
+    & .pricing-item {
+      @include margin-x(0, 0);
     }
   }
 }

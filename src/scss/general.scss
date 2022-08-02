@@ -6,7 +6,7 @@
   }
 
   .margin-right-#{$step} {
-    margin-right: $step* 1px;
+    margin-right: $step * 1px;
   }
 
   .margin-bottom-#{$step} {
@@ -24,6 +24,12 @@
   }
 }
 
+@for $i from 1 through 12 {
+  .row-#{$i} {
+    grid-row: span $i;
+  }
+}
+
 .margin-top-25 {
   margin-top: 25px;
 }
@@ -38,6 +44,14 @@
 
 .margin-top-72 {
   margin-top: 72px;
+}
+
+.margin-right-50 {
+  margin-right: 50px;
+}
+
+.padding-left-100 {
+  padding-left: 100px;
 }
 
 @mixin text-color($color-name, $color-value) {
@@ -91,6 +105,7 @@ body {
 }
 
 h1 {
+  width: 100%;
   margin: 0;
   font-size: 60px;
   line-height: 90px;
@@ -100,6 +115,7 @@ h1 {
 }
 
 h2 {
+  width: 100%;
   margin: 0;
   font-size: 38px;
   line-height: 57px;
@@ -109,6 +125,7 @@ h2 {
 }
 
 h3 {
+  width: 100%;
   margin: 0;
   font-size: 24px;
   font-weight: bold;
@@ -118,6 +135,7 @@ h3 {
 
 p {
   margin: 0;
+  width: 100%;
   text-align: center;
 }
 
@@ -125,8 +143,54 @@ hr {
   @include margin-y(0, 0);
 }
 
+footer {
+  @include padding-y(62px, 48px);
+
+  // background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
+  text-align: left;
+
+  & h2 {
+    @include margin-y(0, 18px);
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: inherit;
+    color: map-get($colors, white);
+  }
+
+  & a,
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: inherit;
+    color: map-get($colors, grey);
+  }
+
+  & a {
+    width: fit-content;
+  }
+
+  & p {
+    width: 100%;
+  }
+
+  & ul {
+    @include margin-y(0, 0);
+    list-style: none;
+    padding-inline-start: 0;
+
+    & li {
+      margin-top: -4px;
+    }
+  }
+}
+
 header {
   position: absolute;
+  z-index: 1;
   display: flex;
   align-items: center;
   top: 25px;
@@ -148,7 +212,7 @@ header {
     height: 25px;
     outline: none;
     border: none;
-    background-color: #3C3B3D;
+    background-color: map-get($colors, dark-grey);
     color: inherit;
     border-radius: 50px;
 
@@ -158,51 +222,32 @@ header {
   }
 
   & .logo-wrapper {
+    font-size: 11px;
+    align-items: center;
     display: flex;
+
+    & p {
+      text-transform: uppercase;
+    }
   }
 
   & .nav-bar {
     @include margin-x(0, 90px);
+    font-size: 11px;
 
     li {
+      @include margin-x(24px, 0);
       display: inline;
 
       & a {
-        @include margin-x(24px, 0);
         text-transform: uppercase;
       }
     }
   }
-
-  & .active {
-    color: map-get($colors, white);
-  }
 }
 
-footer {
-  @include padding-y(3rem, 2rem);
-  background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
-  text-align: left;
-
-  & h2 {
-    @include margin-y(0, 15px);
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: inherit;
-    color: map-get($colors, white);
-  }
-
-  & a {
-    display: block;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: normal;
-    text-decoration: none;
-    text-align: inherit;
-    color: map-get($colors, white);
-  }
+section {
+  @include padding-y(200px, 200px);
 }
 
 @media (max-width: 1200px) {
@@ -220,11 +265,36 @@ footer {
     text-transform: uppercase;
   }
 
+  footer {
+    & .address {
+      font-size: 16px;
+      margin-bottom: -2px;
+    }
+
+    & .subscribe {
+      @include margin-y(-1px, 18px);
+      font-size: 18px;
+    }
+
+    & .contacts {
+      margin-bottom: 13px;
+    }
+
+    & h2 {
+      margin-bottom: 16px;
+    }
+
+    & ul {
+      & li {
+        margin-top: -3px;
+      }
+    }
+  }
+
   header {
     box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
 
     & img {
       @include margin-x(16px, 0);
@@ -240,11 +310,15 @@ footer {
     & .nav-bar {
       @include margin-x(0, 0);
       @include margin-y(17px, 0);
+      @include padding-x(0, 0);
 
       li {
         display: block;
       }
+
+      & .artist {
+        color: map-get($colors, white);
+      }
     }
   }
-
 }
