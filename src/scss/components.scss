@@ -24,7 +24,6 @@
   @include padding-x(30px, 30px);
   @include padding-y(20px, 20px);
   display: block;
-  width: fit-content;
   box-sizing: border-box;
   border: 1px solid map-get($colors, grey);
   border-radius: 5px;
@@ -69,8 +68,8 @@
   align-items: center;
 }
 
-/* Использовал данный класс для того, чтобы добавить к первой секции фоновое изображение
-Но тесты я смог пройти, лишь делая фон черным
+/* Использовал данные классы для того, чтобы добавлять фоновые изображения
+Но тесты я смог пройти, лишь делая фон чёрным.
 
 .bg-banner {
   &:before {
@@ -78,12 +77,10 @@
     top: 0;
 
     z-index: 0;
-  
     width: 100%;
     height: 100%;
 
     @include bg-image("../images/banner.png");
-  
     content: "";
   }
 }
@@ -94,12 +91,11 @@
     top: 0;
 
     z-index: -1;
-  
+
     width: 100%;
     height: 100%;
 
     @include bg-image("../images/Morten Harket.png");
-  
     content: "";
   }
  } */
@@ -110,6 +106,7 @@
 }
 
 .pricing-item {
+  @include padding-x(1.5rem, 1.5rem);
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -118,7 +115,6 @@
   height: 610px;
   color: white;
   border-radius: 1rem;
-  @include padding-x(1.5rem, 1.5rem);
 
   & h3 {
     @include margin-y(20px, 200px);
@@ -242,88 +238,6 @@
   color: map-get($colors, grey);
 }
 
-#page-description {
-  color: map-get($colors, white);
-
-  & form {
-    @include margin-y(17px, 0);
-    width: 570px;
-
-    & input {
-      @include padding-x(0, 20px);
-      box-sizing: border-box;
-      color: map-get($colors, white);
-
-      min-width: 270px;
-      min-height: 50px;
-
-      outline: none;
-      border: 2px solid map-get($colors, grey);
-      border-radius: 3px;
-      background: none;
-
-      &::placeholder {
-        color: map-get($colors, white);
-      }
-    }
-
-    & button {
-      width: 100%;
-      border-radius: 5px;
-    }
-  }
-
-  & p {
-    @include margin-y(30px, 0);
-    font-size: 16px;
-  }
-}
-
-#page-pricing, #page-news, #page-popular-track, #page-discography, #page-similar {
-  @include padding-y(100px, 0);
-
-  & h2 {
-    @include margin-y(0, 50px);
-  }
-
-  & a {
-    @include margin-y(40px, 0);
-  }
-}
-
-#page-app {
-  @include padding-y(100px, 0);
-
-  & h2 {
-    @include margin-y(0, 48px);
-  }
-}
-
-#page-news {
-  & h3 {
-    font-weight: 400;
-    text-transform: capitalize;
-  }
-}
-
-#page-popular-track, #page-discography {
-  & h2 {
-    color: map-get($colors, white);
-  }
-}
-
-#page-popular-track {
-  & h2 {
-    margin-bottom: 30px;
-  }
-}
-
-#page-similar {
-  & h2 {
-    color: map-get($colors, white);
-  }
-}
-
 .grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -366,32 +280,6 @@
   @include padding-x(120px, 120px);
 }
 
-#page-description {
-  & .container-artist {
-    margin-top: 50px;
-    align-items: flex-start;
-    margin-left: 100px;
-    width: 1100px;
-
-    & h1 {
-      text-align: left;
-    }
-
-    & p {
-      margin-top: 16px;
-      text-align: left;
-    }
-  }
-
-  & .artist-button-wrapper {
-    & p {
-      margin-top: 0;
-      font-size: 12.8px;
-      text-align: left;
-    }
-  }
-}
-
 .text-align-left {
   text-align: left;
 }
@@ -402,12 +290,12 @@
 
 .artist-button-wrapper {
   @include margin-y(48px, 0);
-  display: flex; 
+  display: flex;
 
   & .btn {
-    width: 200px;
     @include padding-x(30px, 30px);
     @include padding-y(20px, 20px);
+    width: 200px;
     display: flex;
     border: none;
     align-items: center;
@@ -425,14 +313,12 @@
   }
 }
 
-#page-app {
-  & .container {
-    @include padding-y(100px, 100px);
-  }
-}
-
 .tracks-wrapper {
   width: 100%;
+}
+
+.track-duration {
+  @include margin-x(0, auto);
 }
 
 .track {
@@ -463,7 +349,8 @@
   }
 }
 
-.album, .similar-item {
+.album,
+.similar-item {
   & h3 {
     font-size: 18px;
     line-height: 27px;
@@ -484,7 +371,8 @@
   }
 }
 
-.album-info, .similar-info {
+.album-info,
+.similar-info {
   margin-top: 10px;
 }
 
@@ -514,8 +402,119 @@
   white-space: nowrap;
 }
 
-.track-duration {
-  @include margin-x(0, auto);
+#page-description {
+  color: map-get($colors, white);
+
+  & form {
+    @include margin-y(17px, 0);
+    width: 570px;
+
+    & input {
+      @include padding-x(0, 20px);
+      box-sizing: border-box;
+      color: map-get($colors, white);
+
+      min-width: 270px;
+      min-height: 50px;
+
+      outline: none;
+      border: 2px solid map-get($colors, grey);
+      border-radius: 3px;
+      background: none;
+
+      &::placeholder {
+        color: map-get($colors, white);
+      }
+    }
+
+    & button {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  & p {
+    @include margin-y(30px, 0);
+    font-size: 16px;
+  }
+
+  & .container-artist {
+    margin-top: 50px;
+    align-items: flex-start;
+    margin-left: 100px;
+    width: 1100px;
+
+    & h1 {
+      text-align: left;
+    }
+
+    & p {
+      margin-top: 16px;
+      text-align: left;
+    }
+  }
+
+  & .artist-button-wrapper {
+    & p {
+      margin-top: 0;
+      font-size: 12.8px;
+      text-align: left;
+    }
+  }
+}
+
+#page-pricing,
+#page-news,
+#page-popular-track,
+#page-discography,
+#page-similar {
+  @include padding-y(100px, 0);
+
+  & h2 {
+    @include margin-y(0, 50px);
+  }
+
+  & a {
+    @include margin-y(40px, 0);
+  }
+}
+
+#page-app {
+  @include padding-y(100px, 0);
+
+  & .container {
+    @include padding-y(100px, 100px);
+  }
+
+  & h2 {
+    @include margin-y(0, 48px);
+  }
+}
+
+#page-news {
+  & h3 {
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}
+
+#page-popular-track,
+#page-discography {
+  & h2 {
+    color: map-get($colors, white);
+  }
+}
+
+#page-popular-track {
+  & h2 {
+    margin-bottom: 30px;
+  }
+}
+
+#page-similar {
+  & h2 {
+    color: map-get($colors, white);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -526,47 +525,6 @@
   .container {
     width: 100%;
     box-sizing: border-box;
-  }
-
-  #page-description {
-    & .container {
-      @include padding-y(45px, 0);
-    };
-
-    & .container-artist {
-      @include margin-x(0, 0);
-      @include margin-y(-20px, 24px);
-      width: 100%;
-    }
-
-    & form {
-      width: 100%;
-
-      & input {
-        @include margin-x(0, 0);
-        width: 100%;
-      }
-    }
-
-    & p {
-      @include margin-y(16px, 0);
-      width: 100%;
-    }
-  }
-
-  #email {
-    @include margin-y(24px, 0);
-  }
-
-  #page-pricing {
-    & h3 {
-      @include margin-y(10px, 205px);
-      font-size: 16px;
-    }
-
-    & .pricing-item {
-      @include margin-x(0, 0);
-    }
   }
 
   .pricing-items-wrapper {
@@ -632,18 +590,6 @@
     }
   }
 
-  #page-app {
-    & a {
-      margin-top: 16px;
-    }
-  };
-
-  #page-popular-track {
-    & h2 {
-      margin-bottom: 48px;
-    }
-  }
-
   .links-table {
     @include padding-x(20px, 20px);
     display: flex;
@@ -663,14 +609,14 @@
     display: flex;
     flex-direction: column;
 
-    & a:not(:first-child) {
-      @include margin-y(16px, 0);
-    }
-
     & a {
       @include margin-x(0, 0);
       justify-content: left;
       width: 96%;
+    }
+
+    & a:not(:first-child) {
+      @include margin-y(16px, 0);
     }
   }
 
@@ -699,7 +645,8 @@
     }
   }
 
-  .albums-wrapper, .artists-wrapper {
+  .albums-wrapper,
+  .artists-wrapper {
     width: 100%;
     grid-template-rows: none;
     grid-column-gap: 0;
@@ -717,6 +664,59 @@
     & img {
       width: 137px;
       height: 137px;
+    }
+  }
+
+  #page-app {
+    & a {
+      margin-top: 16px;
+    }
+  }
+
+  #page-popular-track {
+    & h2 {
+      margin-bottom: 48px;
+    }
+  }
+
+  #page-description {
+    & .container {
+      @include padding-y(45px, 0);
+    }
+
+    & .container-artist {
+      @include margin-x(0, 0);
+      @include margin-y(-20px, 24px);
+      width: 100%;
+    }
+
+    & form {
+      width: 100%;
+
+      & input {
+        @include margin-x(0, 0);
+        width: 100%;
+      }
+    }
+
+    & p {
+      @include margin-y(16px, 0);
+      width: 100%;
+    }
+  }
+
+  #email {
+    @include margin-y(24px, 0);
+  }
+
+  #page-pricing {
+    & h3 {
+      @include margin-y(10px, 205px);
+      font-size: 16px;
+    }
+
+    & .pricing-item {
+      @include margin-x(0, 0);
     }
   }
 }

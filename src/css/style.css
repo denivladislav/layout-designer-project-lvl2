@@ -239,6 +239,14 @@
   background-color: #cacaca;
 }
 
+.text-dark-grey {
+  color: #3c3b3d;
+}
+
+.btn-dark-grey {
+  background-color: #3c3b3d;
+}
+
 .text-black {
   color: #08020d;
 }
@@ -331,6 +339,46 @@ hr {
   margin-bottom: 0;
 }
 
+footer {
+  padding-top: 62px;
+  padding-bottom: 48px;
+  text-align: left;
+}
+footer h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: inherit;
+  color: #fff;
+}
+footer a,
+footer p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: inherit;
+  color: #cacaca;
+}
+footer a {
+  width: fit-content;
+}
+footer p {
+  width: 100%;
+}
+footer ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  padding-inline-start: 0;
+}
+footer ul li {
+  margin-top: -4px;
+}
+
 header {
   position: absolute;
   z-index: 1;
@@ -356,7 +404,7 @@ header input {
   height: 25px;
   outline: none;
   border: none;
-  background-color: #3C3B3D;
+  background-color: #3c3b3d;
   color: inherit;
   border-radius: 50px;
 }
@@ -377,9 +425,9 @@ header .nav-bar {
   font-size: 11px;
 }
 header .nav-bar li {
-  display: inline;
   margin-right: 24px;
   margin-left: 0;
+  display: inline;
 }
 header .nav-bar li a {
   text-transform: uppercase;
@@ -388,45 +436,6 @@ header .nav-bar li a {
 section {
   padding-top: 200px;
   padding-bottom: 200px;
-}
-
-footer {
-  padding-top: 62px;
-  padding-bottom: 48px;
-  text-align: left;
-}
-footer h2 {
-  margin-top: 0;
-  margin-bottom: 18px;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: inherit;
-  color: #fff;
-}
-footer a, footer p {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: normal;
-  text-decoration: none;
-  text-align: inherit;
-  color: #cacaca;
-}
-footer a {
-  width: fit-content;
-}
-footer p {
-  width: 100%;
-}
-footer ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  list-style: none;
-  padding-inline-start: 0;
-}
-footer ul li {
-  margin-top: -4px;
 }
 
 @media (max-width: 1200px) {
@@ -441,6 +450,24 @@ footer ul li {
     line-height: 27px;
     font-weight: bold;
     text-transform: uppercase;
+  }
+  footer .address {
+    font-size: 16px;
+    margin-bottom: -2px;
+  }
+  footer .subscribe {
+    margin-top: -1px;
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  footer .contacts {
+    margin-bottom: 13px;
+  }
+  footer h2 {
+    margin-bottom: 16px;
+  }
+  footer ul li {
+    margin-top: -3px;
   }
   header {
     box-sizing: border-box;
@@ -469,29 +496,8 @@ footer ul li {
   header .nav-bar li {
     display: block;
   }
-  header .nav-bar .main {
-    color: #e0e0e0;
-  }
   header .nav-bar .artist {
     color: #fff;
-  }
-  footer .address {
-    font-size: 16px;
-    margin-bottom: -2px;
-  }
-  footer .subscribe {
-    margin-top: -1px;
-    margin-bottom: 18px;
-    font-size: 18px;
-  }
-  footer .contacts {
-    margin-bottom: 13px;
-  }
-  footer h2 {
-    margin-bottom: 16px;
-  }
-  footer ul li {
-    margin-top: -3px;
   }
 }
 .bg-black {
@@ -522,7 +528,6 @@ footer ul li {
   padding-top: 20px;
   padding-bottom: 20px;
   display: block;
-  width: fit-content;
   box-sizing: border-box;
   border: 1px solid #cacaca;
   border-radius: 5px;
@@ -568,8 +573,8 @@ footer ul li {
   align-items: center;
 }
 
-/* Использовал данный класс для того, чтобы добавить к первой секции фоновое изображение
-Но тесты я смог пройти, лишь делая фон черным
+/* Использовал данные классы для того, чтобы добавлять фоновые изображения
+Но тесты я смог пройти, лишь делая фон чёрным.
 
 .bg-banner {
   &:before {
@@ -577,12 +582,10 @@ footer ul li {
     top: 0;
 
     z-index: 0;
-
     width: 100%;
     height: 100%;
 
     @include bg-image("../images/banner.png");
-
     content: "";
   }
 }
@@ -598,7 +601,6 @@ footer ul li {
     height: 100%;
 
     @include bg-image("../images/Morten Harket.png");
-
     content: "";
   }
  } */
@@ -608,6 +610,8 @@ footer ul li {
 }
 
 .pricing-item {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -616,8 +620,6 @@ footer ul li {
   height: 610px;
   color: white;
   border-radius: 1rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
 }
 .pricing-item h3 {
   margin-top: 20px;
@@ -741,78 +743,6 @@ footer ul li {
   color: #cacaca;
 }
 
-#page-description {
-  color: #fff;
-}
-#page-description form {
-  margin-top: 17px;
-  margin-bottom: 0;
-  width: 570px;
-}
-#page-description form input {
-  padding-right: 0;
-  padding-left: 20px;
-  box-sizing: border-box;
-  color: #fff;
-  min-width: 270px;
-  min-height: 50px;
-  outline: none;
-  border: 2px solid #cacaca;
-  border-radius: 3px;
-  background: none;
-}
-#page-description form input::placeholder {
-  color: #fff;
-}
-#page-description form button {
-  width: 100%;
-  border-radius: 5px;
-}
-#page-description p {
-  margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 16px;
-}
-
-#page-pricing, #page-news, #page-popular-track, #page-discography, #page-similar {
-  padding-top: 100px;
-  padding-bottom: 0;
-}
-#page-pricing h2, #page-news h2, #page-popular-track h2, #page-discography h2, #page-similar h2 {
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-#page-pricing a, #page-news a, #page-popular-track a, #page-discography a, #page-similar a {
-  margin-top: 40px;
-  margin-bottom: 0;
-}
-
-#page-app {
-  padding-top: 100px;
-  padding-bottom: 0;
-}
-#page-app h2 {
-  margin-top: 0;
-  margin-bottom: 48px;
-}
-
-#page-news h3 {
-  font-weight: 400;
-  text-transform: capitalize;
-}
-
-#page-popular-track h2, #page-discography h2 {
-  color: #fff;
-}
-
-#page-popular-track h2 {
-  margin-bottom: 30px;
-}
-
-#page-similar h2 {
-  color: #fff;
-}
-
 .grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -857,25 +787,6 @@ footer ul li {
   padding-left: 120px;
 }
 
-#page-description .container-artist {
-  margin-top: 50px;
-  align-items: flex-start;
-  margin-left: 100px;
-  width: 1100px;
-}
-#page-description .container-artist h1 {
-  text-align: left;
-}
-#page-description .container-artist p {
-  margin-top: 16px;
-  text-align: left;
-}
-#page-description .artist-button-wrapper p {
-  margin-top: 0;
-  font-size: 12.8px;
-  text-align: left;
-}
-
 .text-align-left {
   text-align: left;
 }
@@ -890,11 +801,11 @@ footer ul li {
   display: flex;
 }
 .artist-button-wrapper .btn {
-  width: 200px;
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
+  width: 200px;
   display: flex;
   border: none;
   align-items: center;
@@ -909,13 +820,13 @@ footer ul li {
   text-align: left;
 }
 
-#page-app .container {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
 .tracks-wrapper {
   width: 100%;
+}
+
+.track-duration {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .track {
@@ -943,7 +854,8 @@ footer ul li {
   width: fit-content;
 }
 
-.album h3, .similar-item h3 {
+.album h3,
+.similar-item h3 {
   font-size: 18px;
   line-height: 27px;
   font-weight: bold;
@@ -951,7 +863,8 @@ footer ul li {
   text-transform: capitalize;
   text-align: left;
 }
-.album .sub-info, .similar-item .sub-info {
+.album .sub-info,
+.similar-item .sub-info {
   font-size: 16px;
 }
 
@@ -959,7 +872,8 @@ footer ul li {
   text-align: left;
 }
 
-.album-info, .similar-info {
+.album-info,
+.similar-info {
   margin-top: 10px;
 }
 
@@ -986,9 +900,111 @@ footer ul li {
   white-space: nowrap;
 }
 
-.track-duration {
-  margin-right: 0;
-  margin-left: auto;
+#page-description {
+  color: #fff;
+}
+#page-description form {
+  margin-top: 17px;
+  margin-bottom: 0;
+  width: 570px;
+}
+#page-description form input {
+  padding-right: 0;
+  padding-left: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  min-width: 270px;
+  min-height: 50px;
+  outline: none;
+  border: 2px solid #cacaca;
+  border-radius: 3px;
+  background: none;
+}
+#page-description form input::placeholder {
+  color: #fff;
+}
+#page-description form button {
+  width: 100%;
+  border-radius: 5px;
+}
+#page-description p {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+#page-description .container-artist {
+  margin-top: 50px;
+  align-items: flex-start;
+  margin-left: 100px;
+  width: 1100px;
+}
+#page-description .container-artist h1 {
+  text-align: left;
+}
+#page-description .container-artist p {
+  margin-top: 16px;
+  text-align: left;
+}
+#page-description .artist-button-wrapper p {
+  margin-top: 0;
+  font-size: 12.8px;
+  text-align: left;
+}
+
+#page-pricing,
+#page-news,
+#page-popular-track,
+#page-discography,
+#page-similar {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+#page-pricing h2,
+#page-news h2,
+#page-popular-track h2,
+#page-discography h2,
+#page-similar h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+#page-pricing a,
+#page-news a,
+#page-popular-track a,
+#page-discography a,
+#page-similar a {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+#page-app {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+#page-app .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#page-app h2 {
+  margin-top: 0;
+  margin-bottom: 48px;
+}
+
+#page-news h3 {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+#page-popular-track h2,
+#page-discography h2 {
+  color: #fff;
+}
+
+#page-popular-track h2 {
+  margin-bottom: 30px;
+}
+
+#page-similar h2 {
+  color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -999,43 +1015,6 @@ footer ul li {
   .container {
     width: 100%;
     box-sizing: border-box;
-  }
-  #page-description .container {
-    padding-top: 45px;
-    padding-bottom: 0;
-  }
-  #page-description .container-artist {
-    margin-right: 0;
-    margin-left: 0;
-    margin-top: -20px;
-    margin-bottom: 24px;
-    width: 100%;
-  }
-  #page-description form {
-    width: 100%;
-  }
-  #page-description form input {
-    margin-right: 0;
-    margin-left: 0;
-    width: 100%;
-  }
-  #page-description p {
-    margin-top: 16px;
-    margin-bottom: 0;
-    width: 100%;
-  }
-  #email {
-    margin-top: 24px;
-    margin-bottom: 0;
-  }
-  #page-pricing h3 {
-    margin-top: 10px;
-    margin-bottom: 205px;
-    font-size: 16px;
-  }
-  #page-pricing .pricing-item {
-    margin-right: 0;
-    margin-left: 0;
   }
   .pricing-items-wrapper {
     flex-direction: column;
@@ -1093,12 +1072,6 @@ footer ul li {
   .app-info-wrapper p {
     margin-bottom: 0;
   }
-  #page-app a {
-    margin-top: 16px;
-  }
-  #page-popular-track h2 {
-    margin-bottom: 48px;
-  }
   .links-table {
     padding-right: 20px;
     padding-left: 20px;
@@ -1118,15 +1091,15 @@ footer ul li {
     display: flex;
     flex-direction: column;
   }
-  .links-bottom a:not(:first-child) {
-    margin-top: 16px;
-    margin-bottom: 0;
-  }
   .links-bottom a {
     margin-right: 0;
     margin-left: 0;
     justify-content: left;
     width: 96%;
+  }
+  .links-bottom a:not(:first-child) {
+    margin-top: 16px;
+    margin-bottom: 0;
   }
   .horizontal-break {
     margin-top: 74px;
@@ -1151,22 +1124,69 @@ footer ul li {
     padding-right: 0;
     padding-left: 0;
   }
-  .albums-wrapper, .artists-wrapper {
+  .albums-wrapper,
+.artists-wrapper {
     width: 100%;
     grid-template-rows: none;
     grid-column-gap: 0;
   }
-  .albums-wrapper .album, .artists-wrapper .album {
+  .albums-wrapper .album,
+.artists-wrapper .album {
     grid-column: span 6;
     width: 137px;
   }
-  .albums-wrapper .similar-item, .artists-wrapper .similar-item {
+  .albums-wrapper .similar-item,
+.artists-wrapper .similar-item {
     grid-column: span 6;
     width: 137px;
   }
-  .albums-wrapper img, .artists-wrapper img {
+  .albums-wrapper img,
+.artists-wrapper img {
     width: 137px;
     height: 137px;
+  }
+  #page-app a {
+    margin-top: 16px;
+  }
+  #page-popular-track h2 {
+    margin-bottom: 48px;
+  }
+  #page-description .container {
+    padding-top: 45px;
+    padding-bottom: 0;
+  }
+  #page-description .container-artist {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: -20px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  #page-description form {
+    width: 100%;
+  }
+  #page-description form input {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  #page-description p {
+    margin-top: 16px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  #email {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+  #page-pricing h3 {
+    margin-top: 10px;
+    margin-bottom: 205px;
+    font-size: 16px;
+  }
+  #page-pricing .pricing-item {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
