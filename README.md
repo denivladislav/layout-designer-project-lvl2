@@ -16,4 +16,4 @@ make lint
 ```
 
 ## Deploy
-This layout was deployed on Surge. Follow this <a target=_blank href="http://knowledgeable-invention.surge.sh">link</a>.
+This layout was deployed on Surge. Follow this <a target=_blank href="http://knowledgeable-invention.surge.sh/">link</a>.
