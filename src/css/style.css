@@ -383,19 +383,24 @@ header {
   position: absolute;
   z-index: 1;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   align-items: center;
   top: 25px;
   width: 100%;
+  max-width: 1200px;
 }
 header img {
   margin-right: 16px;
-  margin-left: 119px;
+  margin-left: 0;
 }
 header span {
   text-transform: uppercase;
 }
 header input {
-  margin-right: 121px;
+  margin-right: 0;
   margin-left: auto;
   padding-right: 0;
   padding-left: 10px;

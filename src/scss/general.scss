@@ -192,12 +192,17 @@ header {
   position: absolute;
   z-index: 1;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   align-items: center;
   top: 25px;
   width: 100%;
+  max-width: 1200px;
 
   & img {
-    @include margin-x(16px, 119px);
+    @include margin-x(16px, 0);
   }
 
   & span {
@@ -205,7 +210,7 @@ header {
   }
 
   & input {
-    @include margin-x(121px, auto);
+    @include margin-x(0, auto);
     @include padding-x(0, 10px);
     box-sizing: border-box;
     width: 248px;
