@@ -1,97 +1,97 @@
 @charset "UTF-8";
-.margin-top-4 {
+.mt-4 {
   margin-top: 4px;
 }
 
-.margin-right-4 {
+.mr-4 {
   margin-right: 4px;
 }
 
-.margin-bottom-4 {
+.mb-4 {
   margin-bottom: 4px;
 }
 
-.margin-left-4 {
+.ml-4 {
   margin-left: 4px;
 }
 
-.margin-top-8 {
+.mt-8 {
   margin-top: 8px;
 }
 
-.margin-right-8 {
+.mr-8 {
   margin-right: 8px;
 }
 
-.margin-bottom-8 {
+.mb-8 {
   margin-bottom: 8px;
 }
 
-.margin-left-8 {
+.ml-8 {
   margin-left: 8px;
 }
 
-.margin-top-12 {
+.mt-12 {
   margin-top: 12px;
 }
 
-.margin-right-12 {
+.mr-12 {
   margin-right: 12px;
 }
 
-.margin-bottom-12 {
+.mb-12 {
   margin-bottom: 12px;
 }
 
-.margin-left-12 {
+.ml-12 {
   margin-left: 12px;
 }
 
-.margin-top-16 {
+.mt-16 {
   margin-top: 16px;
 }
 
-.margin-right-16 {
+.mr-16 {
   margin-right: 16px;
 }
 
-.margin-bottom-16 {
+.mb-16 {
   margin-bottom: 16px;
 }
 
-.margin-left-16 {
+.ml-16 {
   margin-left: 16px;
 }
 
-.margin-top-20 {
+.mt-20 {
   margin-top: 20px;
 }
 
-.margin-right-20 {
+.mr-20 {
   margin-right: 20px;
 }
 
-.margin-bottom-20 {
+.mb-20 {
   margin-bottom: 20px;
 }
 
-.margin-left-20 {
+.ml-20 {
   margin-left: 20px;
 }
 
-.margin-top-24 {
+.mt-24 {
   margin-top: 24px;
 }
 
-.margin-right-24 {
+.mr-24 {
   margin-right: 24px;
 }
 
-.margin-bottom-24 {
+.mb-24 {
   margin-bottom: 24px;
 }
 
-.margin-left-24 {
+.ml-24 {
   margin-left: 24px;
 }
 
@@ -191,27 +191,27 @@
   grid-row: span 12;
 }
 
-.margin-top-25 {
+.mt-25 {
   margin-top: 25px;
 }
 
-.margin-top-64 {
+.mt-64 {
   margin-top: 64px;
 }
 
-.margin-bottom-64 {
+.mb-64 {
   margin-bottom: 64px;
 }
 
-.margin-top-72 {
+.mt-72 {
   margin-top: 72px;
 }
 
-.margin-right-50 {
+.mr-50 {
   margin-right: 50px;
 }
 
-.padding-left-100 {
+.pl-100 {
   padding-left: 100px;
 }
 
@@ -399,9 +399,11 @@ header img {
 header span {
   text-transform: uppercase;
 }
-header input {
+header form {
   margin-right: 0;
   margin-left: auto;
+}
+header form input {
   padding-right: 0;
   padding-left: 10px;
   box-sizing: border-box;
@@ -413,7 +415,7 @@ header input {
   color: inherit;
   border-radius: 50px;
 }
-header input::placeholder {
+header form input::placeholder {
   text-transform: uppercase;
 }
 header .logo-wrapper {
@@ -484,7 +486,12 @@ section {
     margin-right: 16px;
     margin-left: 0;
   }
-  header input {
+  header form {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  header form input {
     margin-right: 0;
     margin-left: 0;
     margin-top: 17px;

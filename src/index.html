@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-black">
   <header>
     <div class="logo-wrapper">
       <img width="24" height="24" src="images/logo.svg" alt="music-box-logo">
@@ -20,33 +20,35 @@
       <li><a class="artists" href="./artist.html">Исполнители</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
-    <input placeholder="Поиск..." id="search" type="text">
+    <form>
+      <input placeholder="Поиск..." id="search" type="search">
+    </form>
   </header>
   <main>
-    <section id="page-description" class="bg-black">
+    <section id="page-description">
       <div class="container">
         <h1>Онлайн-музыка где угодно</h1>
         <h2>Без ограничений</h2>
         <p>Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</p>
         <form>
           <div>
-            <input class="margin-right-24" placeholder="Имя" id="name" type="text">
+            <input class="mr-24" placeholder="Имя" id="name" type="text">
             <input placeholder="Email" id="email" type="text">
           </div>
-          <button class="btn btn-get-access btn-green margin-top-24" type="submit">Получить доступ</button>
+          <button class="btn btn-get-access btn-green mt-24" type="submit">Получить доступ</button>
         </form>
       </div>
     </section>
-    <section id="page-pricing" class="container bg-black">
+    <section id="page-pricing" class="container">
       <h2 class="text-white">Формы подписки</h2>
       <div class="pricing-items-wrapper">
-        <div class="pricing-item bg-free margin-right-50">
+        <div class="pricing-item bg-free mr-50">
           <h3>Бесплатная</h3>
           <p class="pricing-value">0<span class="currency"> руб.</span></p>
           <a href="#" class="btn">Оформить</a>
           <p class="pricing-footer">Оплата в месяц. Бесплатный тариф предоставляет доступ ко всей коллекции музыки. Присутствует реклама</p>
         </div>
-        <div class="pricing-item bg-standart margin-right-50">
+        <div class="pricing-item bg-standart mr-50">
           <h3>Стандартная</h3>
           <p class="pricing-value">250<span class="currency"> руб.</span></p>
           <a href="#" class="btn">Оформить</a>
@@ -63,7 +65,7 @@
         На всех тарифах возможно прослушивание музыки с мобильных устройств. На премиум тарифе вы можете скачать все композиции на ваше устройство и слушать музыку без подключения к интернету
       </p>
     </section>
-    <section id="page-news" class="container bg-black">
+    <section id="page-news" class="container">
       <h2 class="text-white">Последние новости</h2>
       <div class="news-item">
         <img src="images/Music%20to%20Be%20Murdered%20By.png" alt="eminem-picture">
@@ -75,14 +77,14 @@
           <div class="news-footer">
             <div class="news-author">
               <img src="images/avatar.png" alt="user-avatar">
-              <span class="brand-name margin-left-16">Music Box</span>
-              <span class="margin-left-16">17/01/2020</span>
+              <span class="brand-name ml-16">Music Box</span>
+              <span class="ml-16">17/01/2020</span>
             </div>
             <a href="#" class="btn">К альбому</a>
           </div>
         </div>
       </div>
-      <div class="news-item news-item-reversed margin-top-64">
+      <div class="news-item news-item-reversed mt-64">
         <img src="images/Ordinary%20Man.png" alt="ozzy-osbourne-picture">
         <div class="news-wrapper">
           <div class="news-body">
@@ -92,22 +94,22 @@
           <div class="news-footer">
             <div class="news-author news-author-pt">
               <img src="images/avatar.png" alt="user-avatar">
-              <span class="brand-name margin-left-16">Music Box</span>
-              <span class="margin-left-16">24/02/2020</span>
+              <span class="brand-name ml-16">Music Box</span>
+              <span class="ml-16">24/02/2020</span>
             </div>
             <a href="#" class="btn">К альбому</a>
           </div>
         </div>
       </div>
     </section>
-    <section id="page-app" class="container bg-black">
+    <section id="page-app" class="container">
       <h2 class="text-white">Мобильное приложение</h2>
       <div class="app-info-wrapper">
         <div class="app-info-body">
           <p>
             Воспользуйтесь нашим мобильным приложением. Оно позволит слушать музыку с любого устройства на базе операционных систем Androind и iOS
           </p>
-          <p class="margin-top-16 margin-bottom-24">
+          <p class="mt-16 mb-24">
             С тарифом «Премиум» приложение позволяет скачивать все композиции из нашей коллекции. Вы можете слушать музыку даже без интернета.
           </p>
           <a href="#" class="btn btn-red btn-download">Скачать</a>
@@ -116,7 +118,7 @@
       </div>
     </section>
   </main>
-  <footer class="bg-black">
+  <footer>
     <div class="links-table grid-12 column-gap-40"> 
       <div class="col-3">
         <h2>О нас</h2>
@@ -161,13 +163,13 @@
       <div class="col-3">
         <h2 class="subscribe">Подписывайтесь</h2>
         <div class="links-wrapper">
-          <a href="#" class="margin-right-24">
+          <a href="#" class="mr-24">
             <img src="images/Google+.png" alt="Google plus logo">
           </a>
-          <a href="#" class="margin-right-24">
+          <a href="#" class="mr-24">
             <img src="images/Twitter.png" alt="Twitter logo">
           </a>
-          <a href="#" class="margin-right-24">
+          <a href="#" class="mr-24">
             <img src="images/Facebook.png" alt="Facebook logo">
           </a>
           <a href="#">
@@ -178,10 +180,10 @@
     </div>
     <hr class="horizontal-break">
     <div class="links-wrapper links-bottom">
-      <a href="#" class="margin-right-16">Магазин</a>
-      <a href="#" class="margin-right-16">Обслуживание</a>
-      <a href="#" class="margin-right-16">Блог</a>
-      <a href="#" class="margin-right-16">Поддержка</a>
+      <a href="#" class="mr-16">Магазин</a>
+      <a href="#" class="mr-16">Обслуживание</a>
+      <a href="#" class="mr-16">Блог</a>
+      <a href="#" class="mr-16">Поддержка</a>
       <a href="#">Контакты</a>
     </div>
   </footer>

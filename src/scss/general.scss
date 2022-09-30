@@ -1,19 +1,19 @@
 @for $i from 1 through 6 {
   $step: $i * 4;
 
-  .margin-top-#{$step} {
+  .mt-#{$step} {
     margin-top: $step * 1px;
   }
 
-  .margin-right-#{$step} {
+  .mr-#{$step} {
     margin-right: $step * 1px;
   }
 
-  .margin-bottom-#{$step} {
+  .mb-#{$step} {
     margin-bottom: $step * 1px;
   }
 
-  .margin-left-#{$step} {
+  .ml-#{$step} {
     margin-left: $step * 1px;
   }
 }
@@ -30,27 +30,27 @@
   }
 }
 
-.margin-top-25 {
+.mt-25 {
   margin-top: 25px;
 }
 
-.margin-top-64 {
+.mt-64 {
   margin-top: 64px;
 }
 
-.margin-bottom-64 {
+.mb-64 {
   margin-bottom: 64px;
 }
 
-.margin-top-72 {
+.mt-72 {
   margin-top: 72px;
 }
 
-.margin-right-50 {
+.mr-50 {
   margin-right: 50px;
 }
 
-.padding-left-100 {
+.pl-100 {
   padding-left: 100px;
 }
 
@@ -209,20 +209,23 @@ header {
     text-transform: uppercase;
   }
 
-  & input {
+  & form {
     @include margin-x(0, auto);
-    @include padding-x(0, 10px);
-    box-sizing: border-box;
-    width: 248px;
-    height: 25px;
-    outline: none;
-    border: none;
-    background-color: map-get($colors, dark-grey);
-    color: inherit;
-    border-radius: 50px;
 
-    &::placeholder {
-      text-transform: uppercase;
+    & input {
+      @include padding-x(0, 10px);
+      box-sizing: border-box;
+      width: 248px;
+      height: 25px;
+      outline: none;
+      border: none;
+      background-color: map-get($colors, dark-grey);
+      color: inherit;
+      border-radius: 50px;
+
+      &::placeholder {
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -306,11 +309,16 @@ section {
       @include margin-x(16px, 0);
     }
 
-    & input {
+    & form {
       @include margin-x(0, 0);
-      @include margin-y(17px, 0);
-
       width: 100%;
+
+      & input {
+        @include margin-x(0, 0);
+        @include margin-y(17px, 0);
+
+        width: 100%;
+      }
     }
 
     & .nav-bar {
