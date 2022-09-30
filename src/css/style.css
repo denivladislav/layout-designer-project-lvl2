@@ -435,6 +435,7 @@ header .nav-bar li {
   display: inline;
 }
 header .nav-bar li a {
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -918,6 +919,7 @@ section {
   padding-left: 20px;
   box-sizing: border-box;
   color: #fff;
+  font-size: 14px;
   min-width: 270px;
   min-height: 50px;
   outline: none;
