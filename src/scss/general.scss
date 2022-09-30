@@ -34,6 +34,10 @@
   margin-top: 25px;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 .mt-64 {
   margin-top: 64px;
 }
@@ -48,10 +52,6 @@
 
 .mr-50 {
   margin-right: 50px;
-}
-
-.pl-100 {
-  padding-left: 100px;
 }
 
 @mixin text-color($color-name, $color-value) {
@@ -109,9 +109,7 @@ h1 {
   margin: 0;
   font-size: 60px;
   line-height: 90px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+  font-weight: 700px;
 }
 
 h2 {
@@ -119,18 +117,14 @@ h2 {
   margin: 0;
   font-size: 38px;
   line-height: 57px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+  font-weight: 700px;
 }
 
 h3 {
   width: 100%;
   margin: 0;
   font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+  font-weight: 700px;
 }
 
 p {
@@ -153,7 +147,7 @@ footer {
     @include margin-y(0, 18px);
     font-size: 18px;
     line-height: 27px;
-    font-weight: bold;
+    font-weight: 700px;
     text-transform: uppercase;
     text-align: inherit;
     color: map-get($colors, white);
@@ -163,7 +157,7 @@ footer {
   p {
     font-size: 16px;
     line-height: 24px;
-    font-weight: normal;
+    font-weight: 400px;
     text-decoration: none;
     text-align: inherit;
     color: map-get($colors, grey);
@@ -263,14 +257,14 @@ section {
   h1 {
     font-size: 30px;
     line-height: 45px;
-    font-weight: bold;
+    font-weight: 700px;
     text-transform: uppercase;
   }
 
   h2 {
     font-size: 18px;
     line-height: 27px;
-    font-weight: bold;
+    font-weight: 700px;
     text-transform: uppercase;
   }
 

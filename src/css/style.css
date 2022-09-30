@@ -195,6 +195,10 @@
   margin-top: 25px;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 .mt-64 {
   margin-top: 64px;
 }
@@ -209,10 +213,6 @@
 
 .mr-50 {
   margin-right: 50px;
-}
-
-.pl-100 {
-  padding-left: 100px;
 }
 
 .text-white {
@@ -304,9 +304,7 @@ h1 {
   margin: 0;
   font-size: 60px;
   line-height: 90px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+  font-weight: 700px;
 }
 
 h2 {
@@ -314,18 +312,14 @@ h2 {
   margin: 0;
   font-size: 38px;
   line-height: 57px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+  font-weight: 700px;
 }
 
 h3 {
   width: 100%;
   margin: 0;
   font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+  font-weight: 700px;
 }
 
 p {
@@ -349,7 +343,7 @@ footer h2 {
   margin-bottom: 18px;
   font-size: 18px;
   line-height: 27px;
-  font-weight: bold;
+  font-weight: 700px;
   text-transform: uppercase;
   text-align: inherit;
   color: #fff;
@@ -358,7 +352,7 @@ footer a,
 footer p {
   font-size: 16px;
   line-height: 24px;
-  font-weight: normal;
+  font-weight: 400px;
   text-decoration: none;
   text-align: inherit;
   color: #cacaca;
@@ -450,13 +444,13 @@ section {
   h1 {
     font-size: 30px;
     line-height: 45px;
-    font-weight: bold;
+    font-weight: 700px;
     text-transform: uppercase;
   }
   h2 {
     font-size: 18px;
     line-height: 27px;
-    font-weight: bold;
+    font-weight: 700px;
     text-transform: uppercase;
   }
   footer .address {
@@ -622,6 +616,12 @@ section {
   justify-content: center;
 }
 
+.pricing-item-title {
+  margin-top: 20px;
+  margin-bottom: 200px;
+  font-weight: 400;
+}
+
 .pricing-item {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -631,36 +631,35 @@ section {
   align-items: center;
   flex-basis: 370px;
   height: 610px;
-  color: white;
+  color: #fff;
   border-radius: 1rem;
 }
-.pricing-item h3 {
-  margin-top: 20px;
-  margin-bottom: 200px;
-  font-weight: 400;
-}
-.pricing-item .btn {
+
+.pricing-item-btn {
   font-size: 16px;
 }
-.pricing-item .pricing-value {
+
+.pricing-value {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   font-size: 64px;
   line-height: 1em;
 }
-.pricing-item .pricing-value .currency {
+
+.pricing-footer {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  font-size: 12.8px;
+  line-height: 150%;
+}
+
+.currency {
   padding-right: 0;
   padding-left: 16px;
   line-height: 40px;
   text-transform: uppercase;
   font-size: 32px;
-}
-.pricing-item .pricing-footer {
-  margin-top: 64px;
-  margin-bottom: 64px;
-  font-size: 12.8px;
-  line-height: 150%;
 }
 
 .page-pricing-info {
@@ -804,6 +803,14 @@ section {
   text-align: left;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .albums-wrapper {
   align-self: flex-start;
 }
@@ -853,7 +860,7 @@ section {
   color: #fff;
   font-size: inherit;
   line-height: 19.2px;
-  font-weight: bold;
+  font-weight: 700px;
   text-transform: uppercase;
   text-align: left;
 }
@@ -871,7 +878,7 @@ section {
 .similar-item h3 {
   font-size: 18px;
   line-height: 27px;
-  font-weight: bold;
+  font-weight: 700px;
   color: #fff;
   text-transform: capitalize;
   text-align: left;
@@ -913,37 +920,44 @@ section {
   white-space: nowrap;
 }
 
-#page-description {
-  color: #fff;
+.get-access-info {
+  margin-top: 30px;
 }
-#page-description form {
+
+.get-access-form {
   margin-top: 17px;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
   width: 570px;
 }
-#page-description form input {
+
+.access-inputs-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.access-input {
   padding-right: 0;
   padding-left: 20px;
   box-sizing: border-box;
   color: #fff;
   font-size: 14px;
-  min-width: 270px;
-  min-height: 50px;
+  flex-basis: 273px;
+  flex-shrink: 0;
+  height: 50px;
   outline: none;
   border: 2px solid #cacaca;
   border-radius: 3px;
   background: none;
 }
-#page-description form input::placeholder {
+.access-input::placeholder {
   color: #fff;
 }
-#page-description form button {
-  width: 100%;
-  border-radius: 5px;
-}
-#page-description p {
-  margin-top: 30px;
-  margin-bottom: 0;
+
+#page-description {
+  color: #fff;
   font-size: 16px;
 }
 #page-description .container-artist {
@@ -1030,10 +1044,31 @@ section {
     width: 100%;
     box-sizing: border-box;
   }
+  .get-access-info {
+    margin-top: 16px;
+  }
+  .get-access-form {
+    width: 100%;
+  }
+  .access-inputs-wrapper {
+    flex-direction: column;
+  }
+  .access-input {
+    margin-right: 0;
+    margin-left: 0;
+    flex-basis: 50px;
+  }
+  .pricing-item-title {
+    margin-top: 10px;
+    margin-bottom: 205px;
+    font-size: 16px;
+  }
   .pricing-items-wrapper {
     flex-direction: column;
   }
   .pricing-item {
+    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 50px;
   }
   .page-pricing-info {
@@ -1176,31 +1211,9 @@ section {
     margin-bottom: 24px;
     width: 100%;
   }
-  #page-description form {
-    width: 100%;
-  }
-  #page-description form input {
-    margin-right: 0;
-    margin-left: 0;
-    width: 100%;
-  }
-  #page-description p {
-    margin-top: 16px;
-    margin-bottom: 0;
-    width: 100%;
-  }
   #email {
     margin-top: 24px;
     margin-bottom: 0;
-  }
-  #page-pricing h3 {
-    margin-top: 10px;
-    margin-bottom: 205px;
-    font-size: 16px;
-  }
-  #page-pricing .pricing-item {
-    margin-right: 0;
-    margin-left: 0;
   }
 }
 
