@@ -98,7 +98,7 @@
 
 body {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   color: map-get($colors, grey);
   font-family: Roboto, sans-serif;
@@ -107,7 +107,7 @@ body {
 h1 {
   width: 100%;
   margin: 0;
-  font-size: 60px;
+  font-size: 3.75em;
   line-height: 90px;
   font-weight: 700px;
 }
@@ -115,7 +115,7 @@ h1 {
 h2 {
   width: 100%;
   margin: 0;
-  font-size: 38px;
+  font-size: 2.375em;
   line-height: 57px;
   font-weight: 700px;
 }
@@ -123,7 +123,7 @@ h2 {
 h3 {
   width: 100%;
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 700px;
 }
 
@@ -144,8 +144,8 @@ footer {
   text-align: left;
 
   & h2 {
-    @include margin-y(0, 18px);
-    font-size: 18px;
+    @include margin-y(0, 17px);
+    font-size: 1.125em;
     line-height: 27px;
     font-weight: 700px;
     text-transform: uppercase;
@@ -155,7 +155,7 @@ footer {
 
   & a,
   p {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 24px;
     font-weight: 400px;
     text-decoration: none;
@@ -175,10 +175,14 @@ footer {
     @include margin-y(0, 0);
     list-style: none;
     padding-inline-start: 0;
+  }
 
-    & li {
-      margin-top: -4px;
-    }
+  & .subscribe {
+    font-size: 1.0625em;
+  }
+
+  & .address {
+    font-size: 0.9375em;
   }
 }
 
@@ -224,7 +228,7 @@ header {
   }
 
   & .logo-wrapper {
-    font-size: 11px;
+    font-size: 0.6875em;
     align-items: center;
     display: flex;
 
@@ -235,7 +239,7 @@ header {
 
   & .nav-bar {
     @include margin-x(0, 90px);
-    font-size: 11px;
+    font-size: 0.6875em;
 
     li {
       @include margin-x(24px, 0);
@@ -255,14 +259,14 @@ section {
 
 @media (max-width: 1200px) {
   h1 {
-    font-size: 30px;
+    font-size: 1.875em;
     line-height: 45px;
     font-weight: 700px;
     text-transform: uppercase;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 27px;
     font-weight: 700px;
     text-transform: uppercase;
@@ -270,13 +274,13 @@ section {
 
   footer {
     & .address {
-      font-size: 16px;
-      margin-bottom: -2px;
+      font-size: 1em;
+      margin-bottom: 3px;
     }
 
     & .subscribe {
       @include margin-y(-1px, 18px);
-      font-size: 18px;
+      font-size: 1.125em;
     }
 
     & .contacts {
@@ -285,12 +289,6 @@ section {
 
     & h2 {
       margin-bottom: 16px;
-    }
-
-    & ul {
-      & li {
-        margin-top: -3px;
-      }
     }
   }
 

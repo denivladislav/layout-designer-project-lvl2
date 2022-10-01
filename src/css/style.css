@@ -293,7 +293,7 @@
 }
 body {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   color: #cacaca;
   font-family: Roboto, sans-serif;
@@ -302,7 +302,7 @@ body {
 h1 {
   width: 100%;
   margin: 0;
-  font-size: 60px;
+  font-size: 3.75em;
   line-height: 90px;
   font-weight: 700px;
 }
@@ -310,7 +310,7 @@ h1 {
 h2 {
   width: 100%;
   margin: 0;
-  font-size: 38px;
+  font-size: 2.375em;
   line-height: 57px;
   font-weight: 700px;
 }
@@ -318,7 +318,7 @@ h2 {
 h3 {
   width: 100%;
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 700px;
 }
 
@@ -340,8 +340,8 @@ footer {
 }
 footer h2 {
   margin-top: 0;
-  margin-bottom: 18px;
-  font-size: 18px;
+  margin-bottom: 17px;
+  font-size: 1.125em;
   line-height: 27px;
   font-weight: 700px;
   text-transform: uppercase;
@@ -350,7 +350,7 @@ footer h2 {
 }
 footer a,
 footer p {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 24px;
   font-weight: 400px;
   text-decoration: none;
@@ -369,8 +369,11 @@ footer ul {
   list-style: none;
   padding-inline-start: 0;
 }
-footer ul li {
-  margin-top: -4px;
+footer .subscribe {
+  font-size: 1.0625em;
+}
+footer .address {
+  font-size: 0.9375em;
 }
 
 header {
@@ -413,7 +416,7 @@ header form input::placeholder {
   text-transform: uppercase;
 }
 header .logo-wrapper {
-  font-size: 11px;
+  font-size: 0.6875em;
   align-items: center;
   display: flex;
 }
@@ -423,7 +426,7 @@ header .logo-wrapper p {
 header .nav-bar {
   margin-right: 0;
   margin-left: 90px;
-  font-size: 11px;
+  font-size: 0.6875em;
 }
 header .nav-bar li {
   margin-right: 24px;
@@ -442,34 +445,31 @@ section {
 
 @media (max-width: 1200px) {
   h1 {
-    font-size: 30px;
+    font-size: 1.875em;
     line-height: 45px;
     font-weight: 700px;
     text-transform: uppercase;
   }
   h2 {
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 27px;
     font-weight: 700px;
     text-transform: uppercase;
   }
   footer .address {
-    font-size: 16px;
-    margin-bottom: -2px;
+    font-size: 1em;
+    margin-bottom: 3px;
   }
   footer .subscribe {
     margin-top: -1px;
     margin-bottom: 18px;
-    font-size: 18px;
+    font-size: 1.125em;
   }
   footer .contacts {
     margin-bottom: 13px;
   }
   footer h2 {
     margin-bottom: 16px;
-  }
-  footer ul li {
-    margin-top: -3px;
   }
   header {
     box-sizing: border-box;
@@ -752,7 +752,7 @@ section {
 }
 
 .horizontal-break {
-  margin-top: 73px;
+  margin-top: 70px;
   margin-bottom: 0;
   color: #cacaca;
 }

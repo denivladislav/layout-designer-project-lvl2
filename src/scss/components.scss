@@ -234,7 +234,7 @@
 }
 
 .horizontal-break {
-  @include margin-y(73px, 0);
+  @include margin-y(70px, 0);
   color: map-get($colors, grey);
 }
 
