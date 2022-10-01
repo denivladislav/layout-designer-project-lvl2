@@ -44,7 +44,7 @@
   text-transform: none;
   border-radius: 32px;
   width: 130px;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .btn-mix {
@@ -123,20 +123,20 @@
 }
 
 .pricing-item-btn {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .pricing-value {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 64px;
+  font-size: 4em;
   line-height: 1em;
 }
 
 .pricing-footer {
   @include margin-y(64px, 64px);
-  font-size: 12.8px;
+  font-size: 0.8em;
   line-height: 150%;
 }
 
@@ -144,12 +144,12 @@
   @include padding-x(0, 16px);
   line-height: 40px;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 0.5em;
 }
 
 .page-pricing-info {
   @include margin-y(40px, 0);
-  font-size: 16px;
+  font-size: 1em;
   text-align: center;
   margin-bottom: 17px;
   color: map-get($colors, white);
@@ -169,12 +169,12 @@
   text-transform: none;
   text-align: left;
   color: map-get($colors, white);
-  font-size: 30px;
+  font-size: 1.875em;
 }
 
 .news-item-info {
   @include margin-y(0, 24px);
-  font-size: 16px;
+  font-size: 1em;
   text-align: left;
 }
 
@@ -189,14 +189,14 @@
 .news-author {
   display: flex;
   align-items: center;
-  font-size: 12.8px;
+  font-size: 0.8em;
 }
 
 .news-footer {
   & .btn {
     @include padding-y(16px, 16px);
     width: 135px;
-    font-size: 12px;
+    font-size: 0.75em;
     color: map-get($colors, grey);
   }
 }
@@ -216,7 +216,7 @@
   }
 
   & p {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 24px;
     text-align: left;
   }
@@ -229,7 +229,7 @@
     @include margin-y(16px, 0);
     @include padding-y(16px, 16px);
     @include padding-x(40px, 40px);
-    font-size: 12.8px;
+    font-size: 0.8em;
   }
 }
 
@@ -307,7 +307,7 @@
     display: flex;
     border: none;
     align-items: center;
-    font-size: 12.8px;
+    font-size: 0.8em;
 
     & img {
       filter: invert(100%);
@@ -316,7 +316,7 @@
 
   & p {
     margin-top: 0;
-    font-size: 12.8px;
+    font-size: 0.8em;
     text-align: left;
   }
 }
@@ -334,7 +334,7 @@
   box-sizing: border-box;
   padding-right: 50px;
   align-items: center;
-  font-size: 12.8px;
+  font-size: 0.8em;
 
   & h3 {
     color: map-get($colors, white);
@@ -360,7 +360,7 @@
 .album,
 .similar-item {
   & h3 {
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 27px;
     font-weight: 700px;
     color: map-get($colors, white);
@@ -369,7 +369,7 @@
   }
 
   & .sub-info {
-    font-size: 16px;
+    font-size: 1em;
   }
 }
 
@@ -432,7 +432,7 @@
   box-sizing: border-box;
   color: map-get($colors, white);
 
-  font-size: 14px;
+  font-size: 0.875em;
 
   flex-basis: 273px;
   flex-shrink: 0;
@@ -450,7 +450,7 @@
 
 #page-description {
   color: map-get($colors, white);
-  font-size: 16px;
+  font-size: 1em;
 
   & .container-artist {
     margin-top: 50px;
@@ -471,7 +471,7 @@
   & .artist-button-wrapper {
     & p {
       margin-top: 0;
-      font-size: 12.8px;
+      font-size: 0.8em;
       text-align: left;
     }
   }
@@ -560,7 +560,7 @@
 
   .pricing-item-title {
     @include margin-y(10px, 205px);
-    font-size: 16px;
+    font-size: 1em;
   }
 
   .pricing-items-wrapper {
@@ -574,12 +574,12 @@
 
   .page-pricing-info {
     @include margin-y(-10px, 0);
-    font-size: 16px;
+    font-size: 1em;
   }
 
   .news-item {
     flex-direction: column;
-    font-size: 16px;
+    font-size: 1em;
 
     & .news-wrapper {
       @include margin-x(0, 0);
@@ -596,11 +596,12 @@
   }
 
   .news-footer {
-    font-size: 12.8px;
+    font-size: 1em;
   }
 
   .news-author {
     @include margin-y(0, 48px);
+    font-size: 0.8em;
   }
 
   .mmt-8 {
