@@ -255,6 +255,7 @@ header {
 
 section {
   @include padding-y(200px, 200px);
+  position: relative;
 }
 
 @media (max-width: 1200px) {

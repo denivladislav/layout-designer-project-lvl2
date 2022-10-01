@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .mt-4 {
   margin-top: 4px;
 }
@@ -441,6 +440,7 @@ header .nav-bar li a {
 section {
   padding-top: 200px;
   padding-bottom: 200px;
+  position: relative;
 }
 
 @media (max-width: 1200px) {
@@ -529,6 +529,18 @@ section {
   background-size: cover;
 }
 
+.bg-banner {
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-artist {
+  background-image: url("../images/Morten Harket.png");
+  background-position: center;
+  background-size: cover;
+}
+
 .btn {
   padding-right: 30px;
   padding-left: 30px;
@@ -580,37 +592,6 @@ section {
   align-items: center;
 }
 
-/* Использовал данные классы для того, чтобы добавлять фоновые изображения
-Но тесты я смог пройти, лишь делая фон чёрным.
-
-.bg-banner {
-  &:before {
-    position: absolute;
-    top: 0;
-
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-
-    @include bg-image("../images/banner.png");
-    content: "";
-  }
-}
-
-.bg-artist {
-  &:before {
-    position: absolute;
-    top: 0;
-
-    z-index: -1;
-
-    width: 100%;
-    height: 100%;
-
-    @include bg-image("../images/Morten Harket.png");
-    content: "";
-  }
- } */
 .pricing-items-wrapper {
   display: flex;
   justify-content: center;
@@ -651,13 +632,13 @@ section {
   margin-top: 64px;
   margin-bottom: 64px;
   font-size: 0.8em;
-  line-height: 150%;
+  line-height: 1.5em;
 }
 
 .currency {
   padding-right: 0;
   padding-left: 16px;
-  line-height: 40px;
+  line-height: 1.5em;
   text-transform: uppercase;
   font-size: 0.5em;
 }
@@ -734,7 +715,7 @@ section {
 }
 .app-info-wrapper p {
   font-size: 1em;
-  line-height: 24px;
+  line-height: 1.5em;
   text-align: left;
 }
 .app-info-wrapper img {
@@ -861,7 +842,7 @@ section {
 .track h3 {
   color: #fff;
   font-size: inherit;
-  line-height: 19.2px;
+  line-height: 1.5em;
   font-weight: 700px;
   text-transform: uppercase;
   text-align: left;
@@ -879,7 +860,7 @@ section {
 .album h3,
 .similar-item h3 {
   font-size: 1.125em;
-  line-height: 27px;
+  line-height: 1.5em;
   font-weight: 700px;
   color: #fff;
   text-transform: capitalize;
