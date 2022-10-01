@@ -28,6 +28,10 @@
   @include bg-image("../images/Morten Harket.png");
 }
 
+.bg-gradient {
+  background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
+}
+
 .btn {
   @include padding-x(30px, 30px);
   @include padding-y(20px, 20px);
