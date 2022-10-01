@@ -303,7 +303,7 @@ h1 {
   width: 100%;
   margin: 0;
   font-size: 3.75em;
-  line-height: 90px;
+  line-height: 1.5em;
   font-weight: 700px;
 }
 
@@ -311,7 +311,7 @@ h2 {
   width: 100%;
   margin: 0;
   font-size: 2.375em;
-  line-height: 57px;
+  line-height: 1.5em;
   font-weight: 700px;
 }
 
@@ -342,7 +342,7 @@ footer h2 {
   margin-top: 0;
   margin-bottom: 17px;
   font-size: 1.125em;
-  line-height: 27px;
+  line-height: 1.5em;
   font-weight: 700px;
   text-transform: uppercase;
   text-align: inherit;
@@ -351,7 +351,7 @@ footer h2 {
 footer a,
 footer p {
   font-size: 1em;
-  line-height: 24px;
+  line-height: 1.5em;
   font-weight: 400px;
   text-decoration: none;
   text-align: inherit;
@@ -446,13 +446,13 @@ section {
 @media (max-width: 1200px) {
   h1 {
     font-size: 1.875em;
-    line-height: 45px;
+    line-height: 1.5em;
     font-weight: 700px;
     text-transform: uppercase;
   }
   h2 {
     font-size: 1.125em;
-    line-height: 27px;
+    line-height: 1.5em;
     font-weight: 700px;
     text-transform: uppercase;
   }
