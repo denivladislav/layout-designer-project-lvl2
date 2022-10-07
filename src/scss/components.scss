@@ -32,6 +32,23 @@
   background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
 }
 
+.nav-bar-link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page-link {
+  color: map-get($colors, grey);
+}
+
+.page-link:visited {
+  color: map-get($colors, grey);
+}
+
+.current-page-link {
+  color: map-get($colors, white);
+}
+
 .btn {
   @include padding-x(30px, 30px);
   @include padding-y(20px, 20px);
@@ -340,37 +357,23 @@
   }
 }
 
-.album,
-.similar-item {
-  & h3 {
-    font-size: 1.125em;
-    line-height: 1.5em;
-    font-weight: 700;
-    color: map-get($colors, white);
-    text-transform: capitalize;
-    text-align: left;
-  }
-
-  & .sub-info {
-    font-size: 1em;
-  }
+.album-title,
+.similar-item-title {
+  font-size: 1.125em;
+  line-height: 1.5em;
+  font-weight: 700;
+  color: map-get($colors, white);
+  text-transform: capitalize;
+  text-align: left;
 }
 
-.album {
-  & p {
-    text-align: left;
-  }
+.sub-info {
+  font-size: 1em;
 }
 
 .album-info,
 .similar-info {
   margin-top: 10px;
-}
-
-.similar-item {
-  & p {
-    text-align: center;
-  }
 }
 
 .artists-wrapper {
@@ -434,8 +437,6 @@
 .container-artist {
   margin-top: 50px;
   align-items: flex-start;
-  margin-left: 100px;
-  width: 1100px;
 }
 
 @media (max-width: 1200px) {

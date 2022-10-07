@@ -272,11 +272,6 @@ header {
     li {
       @include margin-x(24px, 0);
       display: inline;
-
-      & a {
-        text-decoration: none;
-        text-transform: uppercase;
-      }
     }
   }
 }
