@@ -12,7 +12,7 @@
   <header>
     <div class="logo-wrapper">
       <img width="24" height="24" src="images/logo.svg" alt="music-box-logo">
-      <p class="text-white">Music Box</p>
+      <p class="text-white text-align-left">Music Box</p>
     </div>
     <ul class="nav-bar">
       <li><a href="./index.html">Главная</a></li>
@@ -26,9 +26,9 @@
   </header>
   <main>
     <section id="page-description" class="bg-artist">
-      <div class="container container-artist">
-        <h1 class="text-align-center text-uppercase">Morten Harket</h1>
-        <p>24 875 поклонников</p>
+      <div class="container container-artist text-white">
+        <h1 class="text-align-left text-uppercase">Morten Harket</h1>
+        <p class="text-align-left mt-16">24 875 поклонников</p>
         <div class="artist-button-wrapper">
           <button class="btn btn-mix btn-purple">
             <img class="mr-16" src="images/play-button.svg" width="20" alt="play button image">
@@ -41,8 +41,8 @@
         </div>
       </div>
     </section>
-    <section id="page-popular-track" class="container">
-      <h2 class="text-align-left text-align-center text-uppercase">Популярные треки</h2>
+    <section id="page-popular-track" class="container pt-100 pb-0">
+      <h2 class="text-align-center text-uppercase text-white mb-30">Популярные треки</h2>
       <div class="tracks-wrapper grid-12-rows">
         <div class="track row-4 col-6">
           <img src="images/Wild%20Seed.png" width="55" alt="wild seed album cover">
@@ -94,8 +94,8 @@
         </div>
       </div>
     </section>
-    <section id="page-discography" class="container">
-      <h2 class="text-align-left text-align-center text-uppercase">Дискография</h2>
+    <section id="page-discography" class="container pt-100 pb-0">
+      <h2 class="text-align-center text-uppercase text-white mb-50">Дискография</h2>
       <div class="albums-wrapper grid-12 row-gap-25 column-gap-50">
         <div class="album col-3">
           <img width="250" height="250" src="images/Brother.png" alt="Brother album cover">
@@ -141,8 +141,8 @@
         </div>
       </div>
     </section>
-    <section id="page-similar" class="container">
-      <h2 class="text-align-left text-align-center text-uppercase">Похожие исполнители</h2>
+    <section id="page-similar" class="container pt-100 pb-0">
+      <h2 class="text-align-center text-uppercase text-white mb-50">Похожие исполнители</h2>
       <div class="artists-wrapper grid-12 row-gap-25 column-gap-50">
         <div class="similar-item col-3">
           <img width="250" height="250" src="images/A-ha.png" alt="A-ha picture">
@@ -202,6 +202,75 @@
         </div>
       </div>
     </section>
+    <footer class="bg-gradient">
+      <div class="links-table grid-12 column-gap-40"> 
+        <div class="col-3">
+          <h2>О нас</h2>
+          <ul>
+            <li>
+              <a href="#">История компании</a>
+            </li>
+            <li>
+              <a href="#">Карьера</a>
+            </li>
+            <li>
+              <a href="#">Особенности</a>
+            </li>
+            <li>
+              <a href="#">Пресса</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <h2>Поддержка</h2>
+          <ul>
+            <li>
+              <a href="#">База знаний</a>
+            </li>
+            <li>
+              <a href="#">Тарифы</a>
+            </li>
+            <li>
+              <a href="#">Мобильное приложение</a>
+            </li>
+            <li>
+              <a href="#">Условие использования</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <h2 class="contacts">Контакты</h2>
+            <a href="#">hello@music.box</a>
+            <p class="address">Russia, Moscow. Music Box studio</p>
+            <a href="#">+ 7 499 999 99 99</a>
+        </div>
+        <div class="col-3">
+          <h2 class="subscribe">Подписывайтесь</h2>
+          <div class="links-wrapper">
+            <a href="#" class="mr-24">
+              <img src="images/Google+.png" alt="Google plus logo">
+            </a>
+            <a href="#" class="mr-24">
+              <img src="images/Twitter.png" alt="Twitter logo">
+            </a>
+            <a href="#" class="mr-24">
+              <img src="images/Facebook.png" alt="Facebook logo">
+            </a>
+            <a href="#">
+              <img src="images/Instagram.png" alt="Instagram logo">
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="horizontal-break">
+      <div class="links-wrapper links-bottom">
+        <a href="#" class="mr-16">Магазин</a>
+        <a href="#" class="mr-16">Обслуживание</a>
+        <a href="#" class="mr-16">Блог</a>
+        <a href="#" class="mr-16">Поддержка</a>
+        <a href="#">Контакты</a>
+      </div>
+    </footer>
   </main>
 </body>
 </html>

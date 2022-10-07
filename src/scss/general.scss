@@ -1,4 +1,4 @@
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
   $step: $i * 4;
 
   .mt-#{$step} {
@@ -42,16 +42,44 @@
   margin-top: 64px;
 }
 
-.mb-64 {
-  margin-bottom: 64px;
-}
-
 .mt-72 {
   margin-top: 72px;
 }
 
+.mt-100 {
+  margin-top: 100px;
+}
+
 .mr-50 {
   margin-right: 50px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pt-100 {
+  padding-top: 100px;
 }
 
 @mixin text-color($color-name, $color-value) {
@@ -109,7 +137,7 @@ h1 {
   margin: 0;
   font-size: 3.75em;
   line-height: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 h2 {
@@ -117,14 +145,14 @@ h2 {
   margin: 0;
   font-size: 2.375em;
   line-height: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 h3 {
   width: 100%;
   margin: 0;
   font-size: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 p {
@@ -138,6 +166,7 @@ hr {
 }
 
 footer {
+  @include margin-y(100px, 0);
   @include padding-y(62px, 48px);
 
   text-align: left;
@@ -146,7 +175,7 @@ footer {
     @include margin-y(0, 17px);
     font-size: 1.125em;
     line-height: 1.5em;
-    font-weight: 700px;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: inherit;
     color: map-get($colors, white);
@@ -156,7 +185,7 @@ footer {
   p {
     font-size: 1em;
     line-height: 1.5em;
-    font-weight: 400px;
+    font-weight: 400;
     text-decoration: none;
     text-align: inherit;
     color: map-get($colors, grey);
@@ -261,15 +290,11 @@ section {
   h1 {
     font-size: 1.875em;
     line-height: 1.5em;
-    font-weight: 700px;
-    text-transform: uppercase;
   }
 
   h2 {
     font-size: 1.125em;
     line-height: 1.5em;
-    font-weight: 700px;
-    text-transform: uppercase;
   }
 
   footer {

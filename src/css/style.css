@@ -1,3 +1,19 @@
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
 .mt-4 {
   margin-top: 4px;
 }
@@ -202,16 +218,44 @@
   margin-top: 64px;
 }
 
-.mb-64 {
-  margin-bottom: 64px;
-}
-
 .mt-72 {
   margin-top: 72px;
 }
 
+.mt-100 {
+  margin-top: 100px;
+}
+
 .mr-50 {
   margin-right: 50px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pt-100 {
+  padding-top: 100px;
 }
 
 .text-white {
@@ -303,7 +347,7 @@ h1 {
   margin: 0;
   font-size: 3.75em;
   line-height: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 h2 {
@@ -311,14 +355,14 @@ h2 {
   margin: 0;
   font-size: 2.375em;
   line-height: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 h3 {
   width: 100%;
   margin: 0;
   font-size: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 p {
@@ -333,6 +377,8 @@ hr {
 }
 
 footer {
+  margin-top: 100px;
+  margin-bottom: 0;
   padding-top: 62px;
   padding-bottom: 48px;
   text-align: left;
@@ -342,7 +388,7 @@ footer h2 {
   margin-bottom: 17px;
   font-size: 1.125em;
   line-height: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: inherit;
   color: #fff;
@@ -351,7 +397,7 @@ footer a,
 footer p {
   font-size: 1em;
   line-height: 1.5em;
-  font-weight: 400px;
+  font-weight: 400;
   text-decoration: none;
   text-align: inherit;
   color: #cacaca;
@@ -447,14 +493,10 @@ section {
   h1 {
     font-size: 1.875em;
     line-height: 1.5em;
-    font-weight: 700px;
-    text-transform: uppercase;
   }
   h2 {
     font-size: 1.125em;
     line-height: 1.5em;
-    font-weight: 700px;
-    text-transform: uppercase;
   }
   footer .address {
     font-size: 1em;
@@ -621,6 +663,7 @@ section {
 }
 
 .pricing-item-btn {
+  margin-top: 40px;
   font-size: 1em;
 }
 
@@ -668,7 +711,8 @@ section {
 .news-item-header {
   margin-top: 0;
   margin-bottom: 30px;
-  text-transform: none;
+  font-weight: 400;
+  text-transform: capitalize;
   text-align: left;
   color: #fff;
   font-size: 1.875em;
@@ -690,6 +734,7 @@ section {
 }
 
 .news-author {
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   font-size: 0.8em;
@@ -847,7 +892,7 @@ section {
   color: #fff;
   font-size: inherit;
   line-height: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: left;
 }
@@ -865,7 +910,7 @@ section {
 .similar-item h3 {
   font-size: 1.125em;
   line-height: 1.5em;
-  font-weight: 700px;
+  font-weight: 700;
   color: #fff;
   text-transform: capitalize;
   text-align: left;
@@ -943,83 +988,11 @@ section {
   color: #fff;
 }
 
-#page-description {
-  color: #fff;
-  font-size: 1em;
-}
-#page-description .container-artist {
+.container-artist {
   margin-top: 50px;
   align-items: flex-start;
   margin-left: 100px;
   width: 1100px;
-}
-#page-description .container-artist h1 {
-  text-align: left;
-}
-#page-description .container-artist p {
-  margin-top: 16px;
-  text-align: left;
-}
-#page-description .artist-button-wrapper p {
-  margin-top: 0;
-  font-size: 0.8em;
-  text-align: left;
-}
-
-#page-pricing,
-#page-news,
-#page-popular-track,
-#page-discography,
-#page-similar {
-  padding-top: 100px;
-  padding-bottom: 0;
-}
-#page-pricing h2,
-#page-news h2,
-#page-popular-track h2,
-#page-discography h2,
-#page-similar h2 {
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-#page-pricing a,
-#page-news a,
-#page-popular-track a,
-#page-discography a,
-#page-similar a {
-  margin-top: 40px;
-  margin-bottom: 0;
-}
-
-#page-app {
-  padding-top: 100px;
-  padding-bottom: 0;
-}
-#page-app .container {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-#page-app h2 {
-  margin-top: 0;
-  margin-bottom: 48px;
-}
-
-#page-news h3 {
-  font-weight: 400;
-  text-transform: capitalize;
-}
-
-#page-popular-track h2,
-#page-discography h2 {
-  color: #fff;
-}
-
-#page-popular-track h2 {
-  margin-bottom: 30px;
-}
-
-#page-similar h2 {
-  color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -1059,7 +1032,7 @@ section {
     margin-bottom: 50px;
   }
   .page-pricing-info {
-    margin-top: -10px;
+    margin-top: -12px;
     margin-bottom: 0;
     font-size: 1em;
   }
@@ -1089,7 +1062,6 @@ section {
   }
   .mmt-8 {
     margin-top: -8px;
-    margin-bottom: 0;
   }
   .app-info-wrapper {
     flex-direction: column-reverse;
@@ -1149,7 +1121,14 @@ section {
     margin-top: 24px;
     margin-bottom: 0;
   }
+  .container-artist {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: -20px;
+    margin-bottom: 24px;
+  }
   .tracks-wrapper {
+    margin-top: 18px;
     display: flex;
     flex-direction: column;
   }
@@ -1182,22 +1161,9 @@ section {
     width: 137px;
     height: 137px;
   }
-  #page-app a {
-    margin-top: 16px;
-  }
-  #page-popular-track h2 {
-    margin-bottom: 48px;
-  }
   #page-description .container {
     padding-top: 45px;
     padding-bottom: 0;
-  }
-  #page-description .container-artist {
-    margin-right: 0;
-    margin-left: 0;
-    margin-top: -20px;
-    margin-bottom: 24px;
-    width: 100%;
   }
   #email {
     margin-top: 24px;
