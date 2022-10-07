@@ -32,6 +32,22 @@
   background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
 }
 
+.logo-wrapper {
+  font-size: 0.6875em;
+  align-items: center;
+  display: flex;
+}
+
+.nav-bar {
+  @include margin-x(0, 90px);
+  font-size: 0.6875em;
+
+  li {
+    @include margin-x(24px, 0);
+    display: inline;
+  }
+}
+
 .nav-bar-link {
   text-decoration: none;
   text-transform: uppercase;
@@ -64,7 +80,7 @@
   text-decoration: none;
 }
 
-.btn-get-access {
+.btn-noborder {
   border: none;
 }
 
@@ -146,10 +162,8 @@
 }
 
 .page-pricing-info {
-  @include margin-y(40px, 0);
   font-size: 1em;
   text-align: center;
-  margin-bottom: 17px;
   color: map-get($colors, white);
 }
 
@@ -163,7 +177,6 @@
 }
 
 .news-item-header {
-  @include margin-y(0, 30px);
   font-weight: 400;
   text-transform: capitalize;
   text-align: left;
@@ -212,7 +225,7 @@
 
   & .app-info-body {
     @include padding-y(16px, 0);
-    width: 600px;
+    flex-basis: 600px;
   }
 
   & p {
@@ -278,6 +291,14 @@
 .links-bottom {
   @include margin-y(40px, 0);
   @include padding-x(120px, 120px);
+}
+
+.subscribe {
+  font-size: 1.0625em;
+}
+
+.address {
+  font-size: 0.9375em;
 }
 
 .text-align-left {
@@ -402,8 +423,6 @@
 
 .get-access-form {
   @include margin-y(17px, 0);
-  display: flex;
-  flex-direction: column;
   width: 570px;
 }
 
@@ -442,6 +461,30 @@
 @media (max-width: 1200px) {
   header {
     @include padding-x(20px, 20px);
+  }
+
+  .nav-bar {
+    @include margin-x(0, 0);
+    @include margin-y(17px, 0);
+    @include padding-x(0, 0);
+
+    li {
+      display: block;
+    }
+  }
+
+  .address {
+    font-size: 1em;
+    margin-bottom: 3px;
+  }
+
+  .subscribe {
+    @include margin-y(-1px, 18px);
+    font-size: 1.125em;
+  }
+
+  .contacts {
+    margin-bottom: 13px;
   }
 
   .container {
@@ -522,7 +565,7 @@
 
     & .app-info-body {
       @include padding-x(0, 0);
-      width: 100%;
+      flex-basis: auto;
     }
 
     & img {

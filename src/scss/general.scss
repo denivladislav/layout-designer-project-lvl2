@@ -38,6 +38,10 @@
   margin-top: 30px;
 }
 
+.mt-40 {
+  margin-top: 40px;
+}
+
 .mt-64 {
   margin-top: 64px;
 }
@@ -52,6 +56,10 @@
 
 .mr-50 {
   margin-right: 50px;
+}
+
+.mb-17 {
+  margin-bottom: 17px;
 }
 
 .mb-30 {
@@ -191,10 +199,6 @@ footer {
     color: map-get($colors, grey);
   }
 
-  & a {
-    width: fit-content;
-  }
-
   & p {
     width: 100%;
   }
@@ -203,14 +207,6 @@ footer {
     @include margin-y(0, 0);
     list-style: none;
     padding-inline-start: 0;
-  }
-
-  & .subscribe {
-    font-size: 1.0625em;
-  }
-
-  & .address {
-    font-size: 0.9375em;
   }
 }
 
@@ -254,26 +250,6 @@ header {
       }
     }
   }
-
-  & .logo-wrapper {
-    font-size: 0.6875em;
-    align-items: center;
-    display: flex;
-
-    & p {
-      text-transform: uppercase;
-    }
-  }
-
-  & .nav-bar {
-    @include margin-x(0, 90px);
-    font-size: 0.6875em;
-
-    li {
-      @include margin-x(24px, 0);
-      display: inline;
-    }
-  }
 }
 
 section {
@@ -293,20 +269,6 @@ section {
   }
 
   footer {
-    & .address {
-      font-size: 1em;
-      margin-bottom: 3px;
-    }
-
-    & .subscribe {
-      @include margin-y(-1px, 18px);
-      font-size: 1.125em;
-    }
-
-    & .contacts {
-      margin-bottom: 13px;
-    }
-
     & h2 {
       margin-bottom: 16px;
     }
@@ -330,20 +292,6 @@ section {
         @include margin-y(17px, 0);
 
         width: 100%;
-      }
-    }
-
-    & .nav-bar {
-      @include margin-x(0, 0);
-      @include margin-y(17px, 0);
-      @include padding-x(0, 0);
-
-      li {
-        display: block;
-      }
-
-      & .artist {
-        color: map-get($colors, white);
       }
     }
   }
