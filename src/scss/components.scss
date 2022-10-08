@@ -1,23 +1,20 @@
-@mixin bg-image($url) {
-  background-image: url($url);
-  background-position: center;
-  background-size: cover;
-}
-
 .bg-black {
   background-color: map-get($colors, black);
 }
 
 .bg-free {
   @include bg-image("../images/subscribe_1.png");
+  background-position: initial;
 }
 
 .bg-standart {
   @include bg-image("../images/subscribe_2.png");
+  background-position: initial;
 }
 
 .bg-premium {
   @include bg-image("../images/subscribe_3.png");
+  background-position: initial;
 }
 
 .bg-banner {
@@ -40,12 +37,13 @@
 
 .nav-bar {
   @include margin-x(0, 90px);
+  @include padding-x(0, 0);
   font-size: 0.6875em;
+}
 
-  li {
-    @include margin-x(24px, 0);
-    display: inline;
-  }
+.nav-bar-el {
+  @include margin-x(22px, 0);
+  display: inline;
 }
 
 .nav-bar-link {
@@ -85,6 +83,9 @@
 }
 
 .btn-download {
+  @include margin-y(16px, 0);
+  @include padding-y(16px, 16px);
+  @include padding-x(40px, 40px);
   border: none;
   text-transform: none;
   border-radius: 32px;
@@ -96,10 +97,10 @@
   @include margin-x(1.5rem, 0);
   display: flex;
   border: none;
+}
 
-  & img {
-    filter: invert(100%);
-  }
+.inverted {
+  filter: invert(100%);
 }
 
 .container {
@@ -199,19 +200,17 @@
 }
 
 .news-author {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
   display: flex;
   align-items: center;
   font-size: 0.8em;
 }
 
-.news-footer {
-  & .btn {
-    @include padding-y(16px, 16px);
-    width: 135px;
-    font-size: 0.75em;
-    color: map-get($colors, grey);
-  }
+.to-album-btn {
+  @include padding-y(16px, 16px);
+  width: 135px;
+  font-size: 0.75em;
+  color: map-get($colors, grey);
 }
 
 .brand-name {
@@ -224,25 +223,7 @@
   display: flex;
 
   & .app-info-body {
-    @include padding-y(16px, 0);
     flex-basis: 600px;
-  }
-
-  & p {
-    font-size: 1em;
-    line-height: 1.5em;
-    text-align: left;
-  }
-
-  & img {
-    @include margin-x(0, 144px);
-  }
-
-  & .btn {
-    @include margin-y(16px, 0);
-    @include padding-y(16px, 16px);
-    @include padding-x(40px, 40px);
-    font-size: 0.8em;
   }
 }
 
@@ -280,12 +261,6 @@
 
 .links-wrapper {
   display: flex;
-
-  & a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 .links-bottom {
@@ -293,11 +268,18 @@
   @include padding-x(120px, 120px);
 }
 
+.img-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .subscribe {
   font-size: 1.0625em;
 }
 
 .address {
+  text-align: left;
   font-size: 0.9375em;
 }
 
@@ -313,6 +295,11 @@
   text-transform: uppercase;
 }
 
+.footer-link {
+  text-decoration: none;
+  color: map-get($colors, grey);
+}
+
 .albums-wrapper {
   align-self: flex-start;
 }
@@ -322,23 +309,11 @@
   display: flex;
 
   & .btn {
-    @include padding-x(30px, 30px);
-    @include padding-y(20px, 20px);
     width: 200px;
     display: flex;
     border: none;
     align-items: center;
     font-size: 0.8em;
-
-    & img {
-      filter: invert(100%);
-    }
-  }
-
-  & p {
-    margin-top: 0;
-    font-size: 0.8em;
-    text-align: left;
   }
 }
 
@@ -346,46 +321,47 @@
   width: 100%;
 }
 
-.track-duration {
-  @include margin-x(0, auto);
-}
-
 .track {
   display: flex;
   box-sizing: border-box;
-  padding-right: 50px;
+  padding-right: 46px;
   align-items: center;
   font-size: 0.8em;
-
-  & h3 {
-    color: map-get($colors, white);
-    font-size: inherit;
-    line-height: 1.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: left;
-  }
-
-  & .track-author {
-    font-size: inherit;
-    text-align: left;
-  }
-
-  & .track-duration {
-    font-size: inherit;
-    text-align: right;
-    width: fit-content;
-  }
 }
 
-.album-title,
+.track-name {
+  color: map-get($colors, white);
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+.track-author {
+  font-size: inherit;
+  text-align: left;
+}
+
+.track-duration {
+  @include margin-x(0, auto);
+  font-size: inherit;
+  text-align: right;
+  width: fit-content;
+}
+
+.album-title {
+  font-size: 1.125em;
+  line-height: 1.5em;
+  font-weight: 700;
+  color: map-get($colors, white);
+  text-transform: capitalize;
+}
+
 .similar-item-title {
   font-size: 1.125em;
   line-height: 1.5em;
   font-weight: 700;
   color: map-get($colors, white);
   text-transform: capitalize;
-  text-align: left;
+  text-align: center;
 }
 
 .sub-info {
@@ -399,15 +375,6 @@
 
 .artists-wrapper {
   align-self: flex-start;
-
-  & h3 {
-    text-align: center;
-  }
-
-  & .similar-info {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .track-info {
@@ -454,7 +421,7 @@
 }
 
 .container-artist {
-  margin-top: 50px;
+  @include margin-y(50px, 24px);
   align-items: flex-start;
 }
 
@@ -465,17 +432,16 @@
 
   .nav-bar {
     @include margin-x(0, 0);
-    @include margin-y(17px, 0);
+    @include margin-y(7px, 0);
     @include padding-x(0, 0);
+  }
 
-    li {
-      display: block;
-    }
+  .nav-bar-el {
+    display: block;
   }
 
   .address {
     font-size: 1em;
-    margin-bottom: 3px;
   }
 
   .subscribe {
@@ -510,7 +476,7 @@
   }
 
   .pricing-item-title {
-    @include margin-y(10px, 205px);
+    @include margin-y(12px, 203px);
     font-size: 1em;
   }
 
@@ -524,7 +490,7 @@
   }
 
   .page-pricing-info {
-    @include margin-y(-12px, 0);
+    @include margin-y(-10px, 0);
     font-size: 1em;
   }
 
@@ -538,6 +504,7 @@
   }
 
   .news-image {
+    width: 374px;
     height: 186px;
   }
 
@@ -567,16 +534,12 @@
       @include padding-x(0, 0);
       flex-basis: auto;
     }
+  }
 
-    & img {
-      @include margin-x(0, 0);
-      width: 337px;
-      height: 278px;
-    }
-
-    & p {
-      margin-bottom: 0;
-    }
+  .app-image {
+    margin: 0;
+    width: 337px;
+    height: 278px;
   }
 
   .links-table {
@@ -585,11 +548,7 @@
     flex-direction: column;
 
     & .col-3 {
-      @include margin-y(30px, 0);
-    }
-
-    & div:first-child {
-      margin-top: 0;
+      @include margin-y(0, 30px);
     }
   }
 
@@ -597,20 +556,6 @@
     @include padding-x(20px, 20px);
     display: flex;
     flex-direction: column;
-
-    & a {
-      @include margin-x(0, 0);
-      justify-content: left;
-      width: 96%;
-    }
-
-    & a:not(:first-child) {
-      @include margin-y(16px, 0);
-    }
-  }
-
-  .horizontal-break {
-    @include margin-y(74px, 0);
   }
 
   .artist-button-wrapper {
@@ -626,17 +571,38 @@
     @include margin-y(-20px, 24px);
   }
 
+  .mt-3-mobile {
+    margin-top: 3px;
+  }
+
+  .mb-30-mobile {
+    margin-bottom: 30px;
+  }
+
+  .mt-45-mobile {
+    margin-top: 45px;
+  }
+
+  .mb-16-mobile {
+    margin-bottom: 16px;
+  }
+
+  .pt-45-mobile {
+    padding-top: 45px;
+  }
+
   .tracks-wrapper {
     margin-top: 18px;
     display: flex;
     flex-direction: column;
 
-    > div:not(:first-child) {
-      @include margin-y(25px, 0);
+    & .track {
+      padding-right: 0;
+      margin-top: 0;
     }
 
-    & .track {
-      @include padding-x(0, 0);
+    & .track:not(:last-child) {
+      @include margin-y(0, 25px);
     }
   }
 
@@ -645,30 +611,21 @@
     width: 100%;
     grid-template-rows: none;
     grid-column-gap: 0;
-
-    & .album {
-      grid-column: span 6;
-      width: 137px;
-    }
-
-    & .similar-item {
-      grid-column: span 6;
-      width: 137px;
-    }
-
-    & img {
-      width: 137px;
-      height: 137px;
-    }
   }
 
-  #page-description {
-    & .container {
-      @include padding-y(45px, 0);
-    }
+  .album {
+    grid-column: span 6;
+    width: 137px;
   }
 
-  #email {
-    @include margin-y(24px, 0);
+  .similar-item {
+    grid-column: span 6;
+    width: 137px;
+  }
+
+  .album-img,
+  .similar-img {
+    width: 137px;
+    height: 137px;
   }
 }
