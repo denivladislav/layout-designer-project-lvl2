@@ -30,10 +30,6 @@
   }
 }
 
-.mt-25 {
-  margin-top: 25px;
-}
-
 .mt-30 {
   margin-top: 30px;
 }
@@ -46,6 +42,10 @@
   margin-top: 44px;
 }
 
+.mt-48 {
+  margin-top: 48px;
+}
+
 .mt-45 {
   margin-top: 45px;
 }
@@ -54,20 +54,16 @@
   margin-top: 64px;
 }
 
-.mt-70 {
-  margin-top: 70px;
-}
-
-.mt-100 {
-  margin-top: 100px;
+.mt-72 {
+  margin-top: 72px;
 }
 
 .mr-50 {
   margin-right: 50px;
 }
 
-.mb-17 {
-  margin-bottom: 17px;
+.mr-15rem {
+  margin-right: 1.5rem;
 }
 
 .mb-30 {
@@ -88,10 +84,6 @@
 
 .mb-100 {
   margin-bottom: 100px;
-}
-
-.mb-64 {
-  margin-bottom: 64px;
 }
 
 .ml-144 {
@@ -274,13 +266,8 @@
   text-transform: uppercase;
 }
 
-.brand-name {
-  color: map-get($colors, orange);
-  text-transform: uppercase;
-}
-
-.relative {
-  position: relative;
+.fs-09375 {
+  font-size: 0.9375em;
 }
 
 @media (max-width: 1200px) {
@@ -288,8 +275,20 @@
     margin-top: 3px;
   }
 
-  .mb-30-mobile {
-    margin-bottom: 30px;
+  .mt-16-mobile {
+    margin-top: 16px;
+  }
+
+  .mt-24-mobile {
+    margin-top: 24px;
+  }
+
+  .mt-m8-mobile {
+    margin-top: -8px;
+  }
+
+  .mt-m10-mobile {
+    margin-top: -10px;
   }
 
   .mt-45-mobile {
@@ -298,6 +297,14 @@
 
   .mb-16-mobile {
     margin-bottom: 16px;
+  }
+
+  .mb-24-mobile {
+    margin-bottom: 24px;
+  }
+
+  .mt-48-mobile {
+    margin-bottom: 48px;
   }
 
   .pt-45-mobile {
@@ -310,5 +317,9 @@
 
   .h2 {
     font-size: 1.125em;
+  }
+
+  .fs-1-mobile {
+    font-size: 1em;
   }
 }

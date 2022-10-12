@@ -36,7 +36,6 @@
 }
 
 .btn-download {
-  @include margin-y(16px, 0);
   @include padding-y(16px, 16px);
   @include padding-x(40px, 40px);
   border: none;
@@ -46,21 +45,11 @@
   font-size: 0.75em;
 }
 
-.btn-mix {
-  @include margin-x(1.5rem, 0);
-  display: flex;
-  border: none;
-}
-
 .container {
   @include padding-x(20px, 20px);
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .pricing-items-wrapper {
@@ -85,11 +74,6 @@
   border-radius: 1rem;
 }
 
-.pricing-item-btn {
-  margin-top: 40px;
-  font-size: 1em;
-}
-
 .pricing-value {
   display: flex;
   justify-content: center;
@@ -111,12 +95,6 @@
   font-size: 0.5em;
 }
 
-.page-pricing-info {
-  font-size: 1em;
-  text-align: center;
-  color: map-get($colors, white);
-}
-
 .news-item {
   display: flex;
   width: 100%;
@@ -134,12 +112,6 @@
   font-size: 1.875em;
 }
 
-.news-item-info {
-  @include margin-y(0, 24px);
-  font-size: 1em;
-  text-align: left;
-}
-
 .news-item-reversed {
   flex-direction: row-reverse;
 
@@ -155,7 +127,7 @@
   font-size: 0.8em;
 }
 
-.to-album-btn {
+.btn-to-album {
   @include padding-y(16px, 16px);
   width: 135px;
   font-size: 0.75em;
@@ -163,17 +135,11 @@
 }
 
 .app-info-wrapper {
-  width: 100%;
   display: flex;
-
-  & .app-info-body {
-    flex-basis: 600px;
-  }
 }
 
-.horizontal-break {
-  @include margin-y(70px, 0);
-  color: map-get($colors, grey);
+.app-info-body {
+  flex-basis: 600px;
 }
 
 .grid-12 {
@@ -187,17 +153,8 @@
   grid-template-columns: repeat(12, 1fr);
 }
 
-.links-table {
-  @include padding-x(120px, 120px);
-}
-
 .links-wrapper {
   display: flex;
-}
-
-.links-bottom {
-  @include margin-y(40px, 0);
-  @include padding-x(120px, 120px);
 }
 
 .img-link {
@@ -206,35 +163,16 @@
   align-items: center;
 }
 
-.subscribe {
-  font-size: 1.0625em;
-}
-
-.address {
-  text-align: left;
-  font-size: 0.9375em;
-}
-
-.footer-link {
-  text-decoration: none;
-  color: map-get($colors, grey);
-}
-
-.albums-wrapper {
-  align-self: flex-start;
-}
-
 .artist-button-wrapper {
-  @include margin-y(48px, 0);
   display: flex;
+}
 
-  & .btn {
-    width: 200px;
-    display: flex;
-    border: none;
-    align-items: center;
-    font-size: 0.8em;
-  }
+.artist-btn {
+  width: 200px;
+  display: flex;
+  border: none;
+  align-items: center;
+  font-size: 0.8em;
 }
 
 .tracks-wrapper {
@@ -284,13 +222,9 @@
   text-align: center;
 }
 
-.sub-info {
-  font-size: 1em;
-}
-
-.album-info,
-.similar-info {
-  margin-top: 10px;
+.album-img,
+.similar-img {
+  margin-bottom: 10px;
 }
 
 .artists-wrapper {
@@ -304,18 +238,14 @@
   white-space: nowrap;
 }
 
-.get-access-info {
-  margin-top: 30px;
-}
-
-.get-access-form {
+.access-form {
   @include margin-y(17px, 0);
-  width: 570px;
+  @include margin-x(auto, auto);
+  width: 47.5%;
 }
 
-.access-inputs-wrapper {
+.access-input-wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
@@ -351,7 +281,7 @@
 }
 
 .footer-h2 {
-  @include margin-y(0, 17px);
+  @include margin-y(0, 16px);
   font-size: 1.125em;
   line-height: 1.5em;
   font-weight: 700;
@@ -364,6 +294,12 @@
   @include margin-y(0, 0);
   list-style: none;
   padding-inline-start: 0;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: map-get($colors, grey);
 }
 
 .header {
@@ -382,13 +318,14 @@
 
 .search-form {
   @include margin-x(0, auto);
+  flex-basis: 248px;
 }
 
 .search-input {
   @include padding-x(0, 10px);
+  @include padding-y(5px, 5px);
   box-sizing: border-box;
-  width: 248px;
-  height: 25px;
+  width: 100%;
   outline: none;
   border: none;
   background-color: map-get($colors, dark-grey);
@@ -426,40 +363,21 @@
   .nav-bar {
     @include margin-x(0, 0);
     @include margin-y(7px, 0);
-    @include padding-x(0, 0);
   }
 
   .nav-bar-el {
     display: block;
   }
 
-  .address {
-    font-size: 1em;
-  }
-
-  .subscribe {
-    @include margin-y(-1px, 18px);
-    font-size: 1.125em;
-  }
-
-  .contacts {
-    margin-bottom: 13px;
-  }
-
   .container {
-    width: 100%;
     box-sizing: border-box;
   }
 
-  .get-access-info {
-    margin-top: 16px;
-  }
-
-  .get-access-form {
+  .access-form {
     width: 100%;
   }
 
-  .access-inputs-wrapper {
+  .access-input-wrapper {
     flex-direction: column;
   }
 
@@ -482,11 +400,6 @@
     margin-bottom: 50px;
   }
 
-  .page-pricing-info {
-    @include margin-y(-10px, 0);
-    font-size: 1em;
-  }
-
   .news-item {
     flex-direction: column;
     font-size: 1em;
@@ -502,7 +415,7 @@
   }
 
   .news-item-header {
-    @include margin-y(50px, 16px);
+    @include margin-y(50px, 0);
     font-size: inherit;
   }
 
@@ -511,22 +424,18 @@
   }
 
   .news-author {
-    @include margin-y(0, 48px);
+    margin-bottom: 48px;
     font-size: 0.8em;
-  }
-
-  .mmt-8 {
-    margin-top: -8px;
   }
 
   .app-info-wrapper {
     flex-direction: column-reverse;
     align-items: center;
+  }
 
-    & .app-info-body {
-      @include padding-x(0, 0);
-      flex-basis: auto;
-    }
+  .app-info-body {
+    @include padding-x(0, 0);
+    flex-basis: auto;
   }
 
   .app-image {
@@ -536,7 +445,6 @@
   }
 
   .links-table {
-    @include padding-x(20px, 20px);
     display: flex;
     flex-direction: column;
 
@@ -546,17 +454,12 @@
   }
 
   .links-bottom {
-    @include padding-x(20px, 20px);
     display: flex;
     flex-direction: column;
   }
 
   .artist-button-wrapper {
     flex-direction: column;
-  }
-
-  .btn-favourites {
-    @include margin-y(24px, 0);
   }
 
   .container-artist {
