@@ -270,6 +270,11 @@
   }
 }
 
+.access-btn {
+  background-color: map-get($colors, green);
+  border: none;
+}
+
 .container-artist {
   @include margin-y(50px, 24px);
   align-items: flex-start;

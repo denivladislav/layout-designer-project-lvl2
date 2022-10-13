@@ -390,11 +390,6 @@
   font-weight: 700;
 }
 
-.p {
-  width: 100%;
-  text-align: center;
-}
-
 .bg-black {
   background-color: #08020d;
 }
@@ -809,6 +804,11 @@
 }
 .access-input::placeholder {
   color: #fff;
+}
+
+.access-btn {
+  background-color: #34c176;
+  border: none;
 }
 
 .container-artist {
