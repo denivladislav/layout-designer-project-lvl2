@@ -11,7 +11,7 @@ Main page contains information about «Music Box» app. Artist page contains inf
 
 This layout is also adapted for mobile devices.
 
-
+![Снимок экрана 2022-10-13 в 10 43 09](https://user-images.githubusercontent.com/71961494/195534002-e4cc054e-e802-4933-917e-ed7332267c2c.png)
 
 ## Setup
 
@@ -31,6 +31,7 @@ This layout was deployed on Surge. Follow this <a target=_blank href="http://kno
 
 ## Credits
 This layout was created as my second project during my <a target=_blank href="https://en.hexlet.io/pages/about">Hexlet</a> "Layout designer" education course.
+
 <a target=_blank href=https://en.hexlet.io/pages/about>
   <img src=https://cdn2.hexlet.io/assets/hexlet_logo_wide-56fe12bf29287c1ac237ef1e5fa70e861e99a954af1f49504f654ae4990fa42b.png alt="Hexlet logo" width="200" length="200">
 </a>
